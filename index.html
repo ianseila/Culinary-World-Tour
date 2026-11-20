@@ -1,0 +1,2750 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Culinary World Tour (CWT) | Alta Gastronomia Internacional em Lagoinha-CE</title>
+  <meta name="description" content="Uma volta ao mundo através da alta gastronomia em Lagoinha-CE. 6 países, 6 experiências temáticas em rotação mensal no Culinary World Tour (CWT)." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              950: '#052256',
+              900: '#07317A',
+              800: '#0A46A8',
+              700: '#1256C4',
+            },
+            gold: {
+              200: '#F5E4B3',
+              300: '#EAD08E',
+              400: '#DFB960',
+              500: '#C9A24B',
+              600: '#A98432',
+            },
+            alabaster: '#F8F9FB',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold': '0 10px 28px -6px rgba(201, 162, 75, 0.42)',
+            'luxury': '0 22px 48px -14px rgba(5, 34, 86, 0.16)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* =========================================================================
+       VARIÁVEIS DINÂMICAS DO TEMA GLOBAL (MUDAM AO CLICAR EM QUALQUER PAÍS)
+    ========================================================================== */
+    :root {
+      --theme-bg-deep: #052256;
+      --theme-bg-mid: #07317A;
+      --theme-bg-bright: #1256C4;
+      --theme-surface-tint: #F8F9FB;
+      --theme-accent: #DFB960;
+      --theme-accent-strong: #C9A24B;
+      --theme-accent-soft: #EAD08E;
+      --theme-accent-text: #052256;
+      --theme-border-alpha: rgba(223, 185, 96, 0.45);
+      --theme-glow: rgba(201, 162, 75, 0.42);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #FFFFFF;
+      color: var(--theme-bg-deep);
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.6s ease, color 0.5s ease;
+    }
+
+    .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.24;
+      padding-top: 0.04em;
+      padding-bottom: 0.04em;
+    }
+
+    /* Classes ligadas às variáveis temáticas dinâmicas */
+    .theme-bg-deep {
+      background-color: var(--theme-bg-deep) !important;
+      transition: background-color 0.65s ease;
+    }
+
+    .theme-bg-mid {
+      background-color: var(--theme-bg-mid) !important;
+      transition: background-color 0.65s ease;
+    }
+
+    .theme-surface-tint {
+      background-color: var(--theme-surface-tint) !important;
+      transition: background-color 0.65s ease;
+    }
+
+    .theme-border {
+      border-color: var(--theme-border-alpha) !important;
+      transition: border-color 0.65s ease;
+    }
+
+    .theme-text-accent {
+      color: var(--theme-accent) !important;
+      transition: color 0.5s ease;
+    }
+
+    .theme-text-accent-soft {
+      color: var(--theme-accent-soft) !important;
+      transition: color 0.5s ease;
+    }
+
+    .theme-text-deep {
+      color: var(--theme-bg-deep) !important;
+      transition: color 0.5s ease;
+    }
+
+    .theme-gradient {
+      background: radial-gradient(circle at 20% 20%, var(--theme-bg-bright) 0%, var(--theme-bg-mid) 52%, var(--theme-bg-deep) 100%) !important;
+      transition: background 0.7s ease;
+    }
+
+    .gold-solid-title {
+      color: var(--theme-accent);
+      text-shadow: 0 4px 22px rgba(0, 0, 0, 0.52);
+      transition: color 0.5s ease;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, var(--theme-accent-soft) 0%, var(--theme-accent) 50%, var(--theme-accent-strong) 100%);
+      color: var(--theme-accent-text);
+      box-shadow: 0 10px 26px -6px var(--theme-glow);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.5s ease;
+    }
+
+    .gold-btn:hover {
+      filter: brightness(1.06);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -6px var(--theme-glow);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    button, a, input, select {
+      touch-action: manipulation;
+    }
+
+    /* =========================================================================
+       ANIMAÇÕES DE BANDEIRA REAL TREMULANDO AO VENTO & CENOGRAFIA GLOBAL
+    ========================================================================== */
+    @keyframes realFlagWave {
+      0%, 100% {
+        transform: perspective(750px) rotateY(-6deg) rotateX(1deg) skewY(-1.2deg) scale(1);
+      }
+      33% {
+        transform: perspective(750px) rotateY(4deg) rotateX(-1deg) skewY(1deg) scale(1.015);
+      }
+      66% {
+        transform: perspective(750px) rotateY(-2deg) rotateX(1.5deg) skewY(-0.6deg) scale(1.02);
+      }
+    }
+
+    @keyframes flagSheenSweep {
+      0% { transform: translateX(-120%) skewX(-22deg); }
+      55%, 100% { transform: translateX(220%) skewX(-22deg); }
+    }
+
+    @keyframes ambientDrift {
+      0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.55; }
+      50% { transform: translateY(-18px) translateX(8px) rotate(8deg); opacity: 0.95; }
+    }
+
+    @keyframes slowOrbit {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes ribbonWave {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .real-flag-container {
+      position: relative;
+      overflow: hidden;
+      animation: realFlagWave 4.8s ease-in-out infinite;
+      box-shadow: 0 22px 45px -10px rgba(0, 0, 0, 0.55), 0 0 0 2px var(--theme-border-alpha);
+    }
+
+    .real-flag-container::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.26) 45%,
+        rgba(0, 0, 0, 0.14) 55%,
+        transparent 80%
+      );
+      animation: flagSheenSweep 4.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .ambient-float {
+      animation: ambientDrift 5.5s ease-in-out infinite;
+    }
+
+    .slow-orbit {
+      animation: slowOrbit 36s linear infinite;
+    }
+
+    .ribbon-flow {
+      background-size: 200% 200%;
+      animation: ribbonWave 9s ease infinite;
+    }
+
+    .tab-fade-in {
+      animation: tabFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-white selection:bg-gold-400 selection:text-royal-950">
+
+  <!-- =====================================================================
+       LOGOMARCA OFICIAL CWT (VETOR CORRIGIDO, ULTRA NÍTIDO E ZERO BUGS)
+       - Globo terrestre aramado completo e simétrico à esquerda/centro
+       - Monograma entrelaçado C + W + T em dourado metálico sem cortes
+       - Rosa-dos-ventos de 8 pontas perfeitamente centralizada no cruzamento do T
+       - Arco ascendente à direita com as 6 bandeiras reais em mini-escudos
+  ====================================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="cwt-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F7E6B5"/>
+        <stop offset="45%" stop-color="#DFB960"/>
+        <stop offset="100%" stop-color="#B68B32"/>
+      </linearGradient>
+
+      <!-- ClipPaths para cada uma das 6 bandeiras no arco da logo -->
+      <clipPath id="arc-flag-1"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+      <clipPath id="arc-flag-2"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+      <clipPath id="arc-flag-3"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+      <clipPath id="arc-flag-4"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+      <clipPath id="arc-flag-5"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+      <clipPath id="arc-flag-6"><rect x="-14" y="-9" width="28" height="18" rx="2.5"/></clipPath>
+    </defs>
+
+    <symbol id="cwt-official-logo" viewBox="0 0 340 310">
+      <!-- 1. GLOBO TERRESTRE ARAMADO CENTRAL -->
+      <g stroke="url(#cwt-gold-metallic)" fill="none" stroke-linecap="round">
+        <circle cx="136" cy="142" r="82" stroke-width="2.2" stroke-opacity="0.95"/>
+        <ellipse cx="136" cy="142" rx="64" ry="82" stroke-width="1.35" stroke-opacity="0.72"/>
+        <ellipse cx="136" cy="142" rx="42" ry="82" stroke-width="1.35" stroke-opacity="0.72"/>
+        <ellipse cx="136" cy="142" rx="19" ry="82" stroke-width="1.35" stroke-opacity="0.72"/>
+        <line x1="136" y1="60" x2="136" y2="224" stroke-width="1.35" stroke-opacity="0.72"/>
+        <path d="M76 86 Q136 99 196 86" stroke-width="1.35" stroke-opacity="0.72"/>
+        <path d="M58 113 Q136 127 214 113" stroke-width="1.35" stroke-opacity="0.72"/>
+        <line x1="54" y1="142" x2="218" y2="142" stroke-width="1.35" stroke-opacity="0.72"/>
+        <path d="M58 171 Q136 157 214 171" stroke-width="1.35" stroke-opacity="0.72"/>
+        <path d="M76 198 Q136 185 196 198" stroke-width="1.35" stroke-opacity="0.72"/>
+      </g>
+
+      <!-- 2. MONOGRAMA ENTRELAÇADO "C + W + T" -->
+      <g fill="url(#cwt-gold-metallic)">
+        <!-- Letra C envolvendo o lado esquerdo do globo -->
+        <path d="M 148 48 A 94 94 0 1 0 148 236 L 142 218 A 75 75 0 1 1 142 66 Z"/>
+
+        <!-- Letra W cruzando o centro do globo -->
+        <polygon points="66,68 85,68 115,152 136,100 157,152 187,68 206,68 165,180 148,180 136,147 124,180 107,180"/>
+
+        <!-- Barra horizontal do T atravessando a base do globo -->
+        <polygon points="62,178 226,178 219,195 69,195"/>
+
+        <!-- Haste vertical do T descendo abaixo do globo -->
+        <rect x="152" y="186" width="17" height="98" rx="1.5"/>
+      </g>
+
+      <!-- 3. ROSA-DOS-VENTOS CENTRAL NO CRUZAMENTO DO "T" -->
+      <g transform="translate(160.5, 186.5)">
+        <circle cx="0" cy="0" r="14.5" fill="#052256" stroke="url(#cwt-gold-metallic)" stroke-width="1.8"/>
+        <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#B68B32" transform="rotate(45)"/>
+        <polygon points="0,-13.5 3.3,-3.3 13.5,0 3.3,3.3 0,13.5 -3.3,3.3 -13.5,0 -3.3,-3.3" fill="url(#cwt-gold-metallic)"/>
+        <circle cx="0" cy="0" r="2.2" fill="#052256"/>
+      </g>
+
+      <!-- 4. ARCO ASCENDENTE DAS 6 BANDEIRAS REAIS À DIREITA -->
+      <!-- Bandeira 1 (Base): BRASIL -->
+      <g transform="translate(232, 232) rotate(-32)">
+        <g clip-path="url(#arc-flag-1)">
+          <rect x="-14" y="-9" width="28" height="18" fill="#009C3B"/>
+          <polygon points="0,-6.5 11,0 0,6.5 -11,0" fill="#FFDF00"/>
+          <circle cx="0" cy="0" r="3.8" fill="#002776"/>
+          <path d="M-3.5 -0.8 Q0 -2 3.5 0.6" stroke="#FFFFFF" stroke-width="0.9" fill="none"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+
+      <!-- Bandeira 2: ITÁLIA -->
+      <g transform="translate(252, 194) rotate(-18)">
+        <g clip-path="url(#arc-flag-2)">
+          <rect x="-14" y="-9" width="9.4" height="18" fill="#009246"/>
+          <rect x="-4.6" y="-9" width="9.2" height="18" fill="#FFFFFF"/>
+          <rect x="4.6" y="-9" width="9.4" height="18" fill="#CE2B37"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+
+      <!-- Bandeira 3: MÉXICO -->
+      <g transform="translate(261, 152) rotate(-5)">
+        <g clip-path="url(#arc-flag-3)">
+          <rect x="-14" y="-9" width="9.4" height="18" fill="#006847"/>
+          <rect x="-4.6" y="-9" width="9.2" height="18" fill="#FFFFFF"/>
+          <rect x="4.6" y="-9" width="9.4" height="18" fill="#CE1126"/>
+          <circle cx="0" cy="0" r="2.6" fill="#8B5A2B"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+
+      <!-- Bandeira 4: FRANÇA -->
+      <g transform="translate(257, 110) rotate(10)">
+        <g clip-path="url(#arc-flag-4)">
+          <rect x="-14" y="-9" width="9.4" height="18" fill="#002395"/>
+          <rect x="-4.6" y="-9" width="9.2" height="18" fill="#FFFFFF"/>
+          <rect x="4.6" y="-9" width="9.4" height="18" fill="#ED2939"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+
+      <!-- Bandeira 5: ESPANHA -->
+      <g transform="translate(242, 71) rotate(24)">
+        <g clip-path="url(#arc-flag-5)">
+          <rect x="-14" y="-9" width="28" height="4.5" fill="#AA151B"/>
+          <rect x="-14" y="-4.5" width="28" height="9" fill="#F1BF00"/>
+          <rect x="-14" y="4.5" width="28" height="4.5" fill="#AA151B"/>
+          <circle cx="-4" cy="0" r="2.2" fill="#AA151B"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+
+      <!-- Bandeira 6 (Topo): GRÉCIA -->
+      <g transform="translate(216, 38) rotate(38)">
+        <g clip-path="url(#arc-flag-6)">
+          <rect x="-14" y="-9" width="28" height="18" fill="#0D5EAF"/>
+          <rect x="-14" y="-7" width="28" height="2" fill="#FFFFFF"/>
+          <rect x="-14" y="-3" width="28" height="2" fill="#FFFFFF"/>
+          <rect x="-14" y="1" width="28" height="2" fill="#FFFFFF"/>
+          <rect x="-14" y="5" width="28" height="2" fill="#FFFFFF"/>
+          <rect x="-14" y="-9" width="11" height="10" fill="#0D5EAF"/>
+          <rect x="-9.5" y="-9" width="2.2" height="10" fill="#FFFFFF"/>
+          <rect x="-14" y="-5" width="11" height="2.2" fill="#FFFFFF"/>
+        </g>
+        <rect x="-14" y="-9" width="28" height="18" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- =====================================================================
+       CAMADA FIXA DE FUNDO TEMATIZADO DO SITE INTEIRO
+       (Injeta silhuetas arquitetônicas, padrões culturais e partículas do país)
+  ====================================================================== -->
+  <div id="global-theme-backdrop" class="fixed inset-0 pointer-events-none z-0 overflow-hidden transition-opacity duration-700" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       1. CABEÇALHO FIXO COM SELETOR RÁPIDO DE TEMA POR PAÍS
+  ====================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 theme-bg-deep backdrop-blur-md border-b theme-border shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 lg:h-24 gap-3">
+
+        <!-- Logomarca Oficial CWT -->
+        <a href="#inicio" onclick="switchMainTab('home'); return true;" class="flex items-center gap-3 min-w-0 group focus:outline-none">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 340 310" class="w-full h-full drop-shadow" aria-label="Logomarca Oficial Culinary World Tour">
+              <use href="#cwt-official-logo"></use>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <span class="block font-display text-sm sm:text-xl lg:text-2xl font-bold tracking-wide text-white uppercase truncate">
+              CULINARY <span class="theme-text-accent">WORLD TOUR</span>
+            </span>
+            <span class="block text-[10px] sm:text-xs theme-text-accent-soft font-medium tracking-wider truncate">
+              Alta Gastronomia Internacional • Lagoinha-CE
+            </span>
+          </div>
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-white" aria-label="Menu Principal">
+          <button type="button" id="nav-tab-home" onclick="switchMainTab('home', '#experiencias')" class="hover:opacity-80 transition py-2 cursor-pointer border-b-2 theme-border theme-text-accent-soft">
+            Experiências
+          </button>
+          <button type="button" onclick="switchMainTab('home', '#calendario')" class="hover:opacity-80 transition py-2 cursor-pointer border-b-2 border-transparent">
+            Calendário
+          </button>
+          <button type="button" id="nav-tab-menu" onclick="openImmersiveMenuTab(activeCountryFilter, true)" class="hover:opacity-80 transition py-2 cursor-pointer border-b-2 border-transparent flex items-center gap-1.5">
+            <i class="fa-solid fa-utensils theme-text-accent text-[11px]"></i>
+            <span>Cardápio Imersivo</span>
+          </button>
+          <button type="button" onclick="switchMainTab('home', '#restaurante')" class="hover:opacity-80 transition py-2 cursor-pointer border-b-2 border-transparent">
+            O Restaurante
+          </button>
+          <button type="button" onclick="switchMainTab('home', '#localizacao')" class="hover:opacity-80 transition py-2 cursor-pointer border-b-2 border-transparent">
+            Localização
+          </button>
+        </nav>
+
+        <!-- Ações Header -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button type="button" onclick="openReservationModal()" class="gold-btn font-bold text-[11px] sm:text-xs uppercase tracking-widest px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-lg cursor-pointer min-h-[44px]">
+            Reservar Mesa
+          </button>
+
+          <button id="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden w-11 h-11 rounded-lg border theme-border theme-bg-mid theme-text-accent flex items-center justify-center hover:brightness-110 transition cursor-pointer">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra Sub-Header: Seletor de Ambientação Temática Global (Bandeiras Reais) -->
+    <div class="bg-black/30 border-t border-white/10 py-2 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-white/90 shrink-0">
+          <i class="fa-solid fa-palette theme-text-accent"></i>
+          <span>Ambientação do Site:</span>
+          <span id="header-active-theme-label" class="theme-text-accent">Oficial CWT</span>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar w-full md:w-auto justify-start md:justify-end">
+          <button type="button" onclick="applyGlobalCountryTheme('Todos', false)" data-theme-pill="Todos" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-gold-400 bg-gold-400 text-royal-950 transition cursor-pointer flex items-center gap-1.5">
+            <i class="fa-solid fa-globe text-[10px]"></i>
+            <span>CWT Oficial</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('Brasil', false)" data-theme-pill="Brasil" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>Brasil</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('México', false)" data-theme-pill="México" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/mx.png" alt="Bandeira do México" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>México</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('França', false)" data-theme-pill="França" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/fr.png" alt="Bandeira da França" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>França</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('Itália', false)" data-theme-pill="Itália" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/it.png" alt="Bandeira da Itália" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>Itália</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('Espanha', false)" data-theme-pill="Espanha" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/es.png" alt="Bandeira da Espanha" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>Espanha</span>
+          </button>
+
+          <button type="button" onclick="applyGlobalCountryTheme('Grécia', false)" data-theme-pill="Grécia" class="theme-pill shrink-0 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border border-white/25 bg-white/10 text-white hover:bg-white/20 transition cursor-pointer flex items-center gap-1.5">
+            <img src="https://flagcdn.com/w40/gr.png" alt="Bandeira da Grécia" class="w-4 h-3 object-cover rounded-[2px] shadow-sm" />
+            <span>Grécia</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer Mobile -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden theme-bg-mid border-t theme-border px-5 py-4 space-y-1 shadow-2xl">
+      <button type="button" onclick="switchMainTab('home', '#experiencias'); closeMobileMenu();" class="w-full text-left block py-3 text-xs font-bold uppercase tracking-widest text-white hover:opacity-80 border-b border-white/10">
+        6 Países, 6 Experiências
+      </button>
+      <button type="button" onclick="switchMainTab('home', '#calendario'); closeMobileMenu();" class="w-full text-left block py-3 text-xs font-bold uppercase tracking-widest text-white hover:opacity-80 border-b border-white/10">
+        Calendário Mensal
+      </button>
+      <button type="button" onclick="openImmersiveMenuTab(activeCountryFilter, true); closeMobileMenu();" class="w-full text-left block py-3 text-xs font-bold uppercase tracking-widest theme-text-accent border-b border-white/10">
+        <i class="fa-solid fa-sparkles mr-1.5"></i> Abrir Aba do Cardápio Imersivo
+      </button>
+      <button type="button" onclick="switchMainTab('home', '#restaurante'); closeMobileMenu();" class="w-full text-left block py-3 text-xs font-bold uppercase tracking-widest text-white hover:opacity-80 border-b border-white/10">
+        O Restaurante & Nossa Essência
+      </button>
+      <button type="button" onclick="switchMainTab('home', '#localizacao'); closeMobileMenu();" class="w-full text-left block py-3 text-xs font-bold uppercase tracking-widest text-white hover:opacity-80">
+        Localização & Contato
+      </button>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       VISÃO / ABA 1: EXPERIÊNCIA PRINCIPAL DO RESTAURANTE
+  ====================================================================== -->
+  <main id="view-home" class="relative z-10 tab-fade-in">
+
+    <!-- HERO SECTION + BARRA RÁPIDA DE RESERVA POR DATA -->
+    <section id="inicio" class="relative min-h-screen flex flex-col justify-between theme-gradient text-white pt-32 lg:pt-36 overflow-hidden">
+      <!-- Fundo Arquitetônico / Culinário -->
+      <div class="absolute inset-0 z-0">
+        <img
+          id="hero-bg-image"
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1800&q=80"
+          onerror="this.onerror=null;this.src=createFallbackSvg('CULINARY WORLD TOUR','LAGOINHA • CEARÁ');"
+          alt="Ambiente sofisticado do restaurante Culinary World Tour"
+          class="w-full h-full object-cover object-center opacity-22 transition-all duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/65"></div>
+      </div>
+
+      <!-- Decoração Cultural Dinâmica dentro do Hero -->
+      <div id="hero-country-decor" class="absolute inset-0 pointer-events-none z-10 overflow-hidden"></div>
+
+      <!-- Conteúdo Central do Hero -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto py-10 sm:py-14 lg:py-16 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <div id="hero-status-pill" class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/55 border theme-border theme-text-accent-soft text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-5 backdrop-blur-sm">
+              <i class="fa-solid fa-compass theme-text-accent"></i>
+              <span id="hero-status-text">6 Países • 6 Experiências em Rotação Mensal</span>
+            </div>
+
+            <h1 class="font-display font-extrabold uppercase tracking-wide text-white text-[clamp(2.1rem,5.5vw,4.15rem)]">
+              <span class="block gold-solid-title">CULINARY WORLD TOUR</span>
+            </h1>
+
+            <p id="hero-tagline" class="font-display italic text-xl sm:text-3xl text-white/95 mt-3">
+              Uma volta ao mundo através da alta gastronomia
+            </p>
+
+            <p id="hero-description" class="mt-5 text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Em <strong class="text-white font-semibold">Lagoinha-CE</strong>, cada semana e fim de semana do mês transportam você para a mesa autêntica de um destino internacional. Clique em qualquer país para transformar o site inteiro com sua bandeira, cores e sabores.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 sm:gap-4">
+              <button type="button" onclick="openReservationModal()" class="gold-btn font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-lg cursor-pointer min-h-[50px]">
+                <i class="fa-solid fa-passport mr-2"></i>Emitir Passaporte de Reserva
+              </button>
+              <button type="button" onclick="openImmersiveMenuTab(activeCountryFilter, true)" class="px-8 py-4 rounded-lg border-2 theme-border hover:bg-white/10 text-white font-bold text-xs sm:text-sm uppercase tracking-widest text-center transition bg-black/45 backdrop-blur-sm min-h-[50px] flex items-center justify-center gap-2 cursor-pointer">
+                <span>Abrir Cardápio Imersivo</span>
+                <i class="fa-solid fa-utensils theme-text-accent text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Medalhão Oficial CWT ou Bandeira Real Animada do País Ativo -->
+          <div class="lg:col-span-5 flex flex-col items-center justify-center">
+            <div id="hero-emblem-card" class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-black/55 backdrop-blur-md border-2 theme-border flex flex-col items-center justify-center p-6 shadow-2xl transition-all duration-500">
+              <div class="absolute inset-3 rounded-full border border-dashed theme-border opacity-70"></div>
+              <svg viewBox="0 0 340 310" class="w-40 h-40 sm:w-48 sm:h-48 drop-shadow-lg" aria-label="Logomarca Oficial CWT">
+                <use href="#cwt-official-logo"></use>
+              </svg>
+              <span class="font-display text-xs sm:text-sm font-bold uppercase tracking-widest text-white mt-1">PASSAPORTE CWT</span>
+              <span class="text-[10px] sm:text-[11px] uppercase tracking-widest theme-text-accent-soft mt-0.5">Lagoinha • Ceará • Brasil</span>
+            </div>
+
+            <!-- Card Flutuante da Bandeira Real quando um País está selecionado -->
+            <div id="hero-active-flag-box" class="hidden flex-col items-center">
+              <div class="real-flag-container rounded-2xl border-2 theme-border bg-black/40 p-2.5">
+                <img id="hero-active-flag-img" src="" alt="" class="w-60 sm:w-72 h-40 sm:h-48 object-cover rounded-xl" />
+              </div>
+              <div class="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/65 border theme-border text-xs font-bold uppercase tracking-widest text-white">
+                <span id="hero-active-flag-label">Tema Ativo</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Barra Rápida de Reserva Sincronizada com a Data -->
+      <div id="calendario" class="relative z-20 bg-black/65 backdrop-blur-md border-t theme-border py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <form onsubmit="handleQuickBarSubmit(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 items-end">
+
+            <div class="lg:col-span-3">
+              <label for="quick-date" class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft mb-1.5">
+                1. Escolha a Data da Visita
+              </label>
+              <input id="quick-date" type="date" required onchange="syncQuickBarWithDate()" class="w-full h-12 px-3.5 bg-white/10 border theme-border focus:outline-none rounded-lg text-sm text-white [color-scheme:dark]" />
+            </div>
+
+            <div class="lg:col-span-4">
+              <span class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft mb-1.5">
+                2. Destino Temático Automático
+              </span>
+              <div id="quick-theme-box" class="w-full h-12 px-3.5 bg-white/10 border theme-border rounded-lg flex items-center justify-between gap-2 text-xs sm:text-sm font-semibold text-white">
+                <span id="quick-theme-text" class="truncate">Brasil • Feijoada (R$ 75,00)</span>
+                <span id="quick-period-tag" class="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded bg-black/50 theme-text-accent shrink-0 font-bold">1ª Semana</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-2">
+              <label for="quick-time" class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft mb-1.5">
+                3. Horário
+              </label>
+              <select id="quick-time" class="w-full h-12 px-3.5 bg-royal-950 border theme-border focus:outline-none rounded-lg text-sm text-white">
+                <option value="12:30 • Almoço">12:30 • Almoço</option>
+                <option value="19:30 • Jantar" selected>19:30 • Jantar</option>
+                <option value="20:30 • Jantar">20:30 • Jantar</option>
+                <option value="21:30 • Jantar">21:30 • Jantar</option>
+              </select>
+            </div>
+
+            <div class="lg:col-span-3">
+              <button type="submit" class="w-full h-12 gold-btn font-bold text-xs uppercase tracking-widest px-5 rounded-lg cursor-pointer flex items-center justify-center gap-2">
+                <span>Reservar Nesta Data</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Aviso discreto caso o usuário selecione Segunda ou Terça -->
+          <div id="quick-closed-alert" class="hidden mt-3.5 px-4 py-3 rounded-lg bg-amber-500/20 border theme-border theme-text-accent-soft text-xs flex flex-wrap items-center justify-between gap-2">
+            <span>
+              <i class="fa-solid fa-circle-info mr-1.5"></i>
+              Funcionamos de <strong>Quarta a Domingo (12h às 23h)</strong>. Nesta semana o tema é <strong id="quick-closed-country">Brasil</strong> — sugerimos reservar de quarta a domingo.
+            </span>
+            <button type="button" onclick="snapQuickDateToOpenDay()" class="underline font-bold text-white hover:opacity-80 cursor-pointer">
+              Ajustar para próximo dia aberto
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO '6 PAÍSES, 6 EXPERIÊNCIAS' (COM BANDEIRAS REAIS + ATIVAÇÃO DE TEMA)
+    ====================================================================== -->
+    <section id="experiencias" class="py-16 sm:py-24 theme-surface-tint">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest theme-text-accent">Calendário Mensal Oficial</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold theme-text-deep mt-2">
+            6 Países, 6 Experiências
+          </h2>
+          <div class="w-24 h-0.5 mx-auto my-5" style="background-color: var(--theme-accent);"></div>
+          <p class="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+            Clique em <strong>Ativar Tema & Ver Cardápio</strong> em qualquer destino para transformar todo o site com as cores, bandeira animada e pratos oficiais daquela semana (funcionamento de <strong>Quarta a Domingo, das 12h às 23h</strong>).
+          </p>
+        </div>
+
+        <!-- Grade dos 6 Destinos -->
+        <div id="countries-grid" class="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO CARDÁPIO IMERSIVO INTEGRADO (TAMBÉM ABRE EM ABA DEDICADA OU NOVA ABA)
+    ====================================================================== -->
+    <section id="cardapio-preview" class="py-16 sm:py-24 theme-gradient text-white relative overflow-hidden">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/50 border theme-border theme-text-accent-soft text-xs font-bold uppercase tracking-widest">
+          <i class="fa-solid fa-wand-magic-sparkles theme-text-accent"></i>
+          <span>Experiência Interativa com Bandeiras Reais</span>
+        </span>
+
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+          Cardápio Internacional Imersivo
+        </h2>
+        <div class="w-28 h-0.5 mx-auto my-5" style="background-color: var(--theme-accent);"></div>
+        <p class="text-white/90 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
+          Clique em um país para vestir todo o site com a atmosfera visual de sua bandeira ou abra o cardápio em uma nova aba exclusiva.
+        </p>
+
+        <!-- Botões Rápidos com Bandeiras Reais em Alta Definição -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 max-w-5xl mx-auto">
+          <button type="button" onclick="openImmersiveMenuTab('Brasil', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/br.png" alt="Bandeira do Brasil" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">Brasil</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">1ª Semana</span>
+          </button>
+
+          <button type="button" onclick="openImmersiveMenuTab('México', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/mx.png" alt="Bandeira do México" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">México</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">2ª Semana</span>
+          </button>
+
+          <button type="button" onclick="openImmersiveMenuTab('França', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/fr.png" alt="Bandeira da França" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">França</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">3ª Semana</span>
+          </button>
+
+          <button type="button" onclick="openImmersiveMenuTab('Itália', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/it.png" alt="Bandeira da Itália" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">Itália</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">4ª Semana</span>
+          </button>
+
+          <button type="button" onclick="openImmersiveMenuTab('Espanha', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/es.png" alt="Bandeira da Espanha" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">Espanha</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">1º/2º FDS</span>
+          </button>
+
+          <button type="button" onclick="openImmersiveMenuTab('Grécia', true)" class="group p-4 rounded-xl bg-black/45 hover:bg-black/65 border theme-border transition cursor-pointer flex flex-col items-center gap-2.5 shadow-lg backdrop-blur-sm">
+            <img src="https://flagcdn.com/w80/gr.png" alt="Bandeira da Grécia" class="w-11 h-7 object-cover rounded shadow border border-white/25 group-hover:scale-110 transition-transform" />
+            <span class="font-display font-bold text-sm text-white group-hover:opacity-90">Grécia</span>
+            <span class="text-[10px] uppercase tracking-wider theme-text-accent-soft">3º/4º FDS</span>
+          </button>
+        </div>
+
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button type="button" onclick="openImmersiveMenuTab(activeCountryFilter, true)" class="gold-btn font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-lg cursor-pointer min-h-[50px] inline-flex items-center gap-2.5">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Abrir Aba Completa do Cardápio (18 Pratos)</span>
+          </button>
+          <button type="button" onclick="openStandaloneMenuNewBrowserTab(activeCountryFilter)" class="px-6 py-4 rounded-lg border theme-border bg-black/50 hover:bg-black/70 theme-text-accent-soft hover:text-white font-bold text-xs uppercase tracking-widest transition cursor-pointer min-h-[50px] inline-flex items-center gap-2">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            <span>Abrir Cardápio em Nova Aba</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 'O RESTAURANTE & NOSSA ESSÊNCIA'
+    ====================================================================== -->
+    <section id="restaurante" class="py-16 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Arquitetura 2 Andares / 60 Lugares -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl overflow-hidden shadow-luxury border-2 theme-border bg-neutral-950">
+              <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=85"
+                onerror="this.onerror=null;this.src=createFallbackSvg('SALÃO PREMIUM CWT','DOIS ANDARES • 60 LUGARES');"
+                alt="Interior escuro sofisticado do Culinary World Tour com iluminação dourada"
+                class="w-full h-[320px] sm:h-[430px] object-cover object-center"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5 text-white">
+                <span class="inline-block px-3 py-1 rounded bg-black/80 border theme-border text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft">
+                  Rua Francisco Henrique • Lagoinha-CE
+                </span>
+                <p class="font-display text-xl sm:text-2xl font-bold text-white mt-2">
+                  Dois Andares • Capacidade para 60 Pessoas
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <span class="text-xs font-bold uppercase tracking-widest theme-text-accent">O Restaurante & Nossa Essência</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold theme-text-deep mt-2">
+              Hospitalidade imersiva em dois ambientes exclusivos.
+            </h2>
+            <div class="w-24 h-0.5 my-5" style="background-color: var(--theme-accent);"></div>
+
+            <p class="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+              O <strong class="theme-text-deep font-semibold">Culinary World Tour (CWT)</strong> transforma a alta gastronomia em uma experiência cultural completa em <strong class="theme-text-deep">Lagoinha-CE</strong>, acolhendo visitantes de Paraipaba, Paracuru e todo o litoral oeste cearense.
+            </p>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
+              Com estrutura de <strong class="theme-text-deep">dois andares e 60 lugares</strong>, o salão combina elegância contemporânea, iluminação intimista e ambientação temática renovada conforme o país em cartaz.
+            </p>
+
+            <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl theme-surface-tint border theme-border">
+                <div class="flex items-center gap-2.5 font-bold text-sm theme-text-deep">
+                  <i class="fa-solid fa-layer-group theme-text-accent"></i>
+                  <span>2 Andares • 60 Lugares</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">Salão térreo climatizado e mezanino panorâmico reservado.</p>
+              </div>
+
+              <div class="p-4 rounded-xl theme-surface-tint border theme-border">
+                <div class="flex items-center gap-2.5 font-bold text-sm theme-text-deep">
+                  <i class="fa-solid fa-calendar-check theme-text-accent"></i>
+                  <span>Rotação Temática Fixa</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">6 países distribuídos entre as semanas e fins de semana do mês.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Missão & Visão -->
+        <div class="mt-16 sm:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-7">
+          <div class="p-7 sm:p-10 rounded-2xl theme-gradient text-white border theme-border shadow-luxury">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest theme-text-accent-soft">
+              <i class="fa-solid fa-compass"></i> Missão
+            </span>
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mt-3">
+              Conectar pessoas aos sabores do mundo
+            </h3>
+            <p class="text-white/90 text-sm sm:text-base leading-relaxed mt-4">
+              Oferecer uma jornada cultural e sensorial inesquecível, conectando pessoas aos sabores mais icônicos do mundo através de um menu dinâmico, ingredientes selecionados e um ambiente totalmente imersivo que transforma cada refeição em uma viagem inesquecível.
+            </p>
+          </div>
+
+          <div class="p-7 sm:p-10 rounded-2xl theme-surface-tint border-2 theme-border shadow-luxury">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest theme-text-accent">
+              <i class="fa-solid fa-globe"></i> Visão
+            </span>
+            <h3 class="font-display text-2xl sm:text-3xl font-bold theme-text-deep mt-3">
+              Referência em gastronomia temática no Ceará
+            </h3>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed mt-4">
+              Consolidar o Culinary World Tour como a principal referência em gastronomia temática e de experiência no Ceará, expandindo a marca e tornando-se um modelo inovador no setor de restauração e entretenimento gastronômico.
+            </p>
+          </div>
+        </div>
+
+        <!-- Os 6 Valores Fundamentais -->
+        <div class="mt-16 sm:mt-20">
+          <div class="text-center mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest theme-text-accent">Nossa Filosofia</span>
+            <h3 class="font-display text-2xl sm:text-4xl font-bold theme-text-deep mt-2">
+              Os 6 Valores do Culinary World Tour
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">01.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Diversidade Cultural</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Valorizar as tradições gastronômicas dos países em cada rota temática.</p>
+            </div>
+
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">02.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Autenticidade</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Preservar os sabores originais e característicos de cada destino.</p>
+            </div>
+
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">03.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Qualidade</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Oferecer alimentos elaborados com ingredientes rigorosamente selecionados.</p>
+            </div>
+
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">04.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Inovação</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Trazer novidades contínuas e apresentar diferentes experiências gastronômicas.</p>
+            </div>
+
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">05.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Higiene</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Manter elevados padrões de limpeza e segurança alimentar em todas as etapas.</p>
+            </div>
+
+            <div class="p-6 rounded-xl border theme-border bg-white shadow-sm">
+              <span class="font-display text-2xl font-bold theme-text-accent">06.</span>
+              <h4 class="font-display text-xl font-bold theme-text-deep mt-1.5">Compromisso e Respeito</h4>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">Valorizar ao máximo os clientes, culturas e colaboradores.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citação Editorial de Encerramento com Nova Logo -->
+        <div class="mt-16 rounded-2xl theme-gradient p-8 sm:p-12 text-center text-white border theme-border shadow-luxury">
+          <svg viewBox="0 0 340 310" class="w-20 h-20 mx-auto mb-5" aria-label="Emblema CWT">
+            <use href="#cwt-official-logo"></use>
+          </svg>
+          <blockquote class="font-display italic text-lg sm:text-2xl lg:text-3xl text-white max-w-4xl mx-auto">
+            “O Culinary World Tour não é apenas sobre servir refeições; é sobre conectar pessoas a novas culturas através de sabores inesquecíveis. Mais do que um restaurante, somos a sua próxima viagem.”
+          </blockquote>
+          <div class="w-20 h-0.5 mx-auto my-5" style="background-color: var(--theme-accent);"></div>
+          <p class="text-xs font-bold uppercase tracking-widest theme-text-accent-soft">
+            Culinary World Tour • @CwT.oficial • Lagoinha-CE
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 'LOCALIZAÇÃO, HORÁRIOS & TABELA DE ROTAÇÃO'
+    ====================================================================== -->
+    <section id="localizacao" class="py-16 sm:py-24 theme-surface-tint border-t theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+          <!-- Coluna Informações + Instagram Dourado -->
+          <div class="lg:col-span-6">
+            <span class="text-xs font-bold uppercase tracking-widest theme-text-accent">Localização & Funcionamento</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold theme-text-deep mt-2">
+              Embarque em Lagoinha-CE
+            </h2>
+            <div class="w-20 h-0.5 my-5" style="background-color: var(--theme-accent);"></div>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Visite nossa sede na <strong class="theme-text-deep">Rua Francisco Henrique, Lagoinha - CE</strong> e viva uma experiência gastronômica internacional sem sair do litoral cearense.
+            </p>
+
+            <div class="mt-8 space-y-5">
+              <!-- Endereço -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full theme-bg-deep border theme-border flex items-center justify-center shrink-0 theme-text-accent">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold theme-text-deep text-base">Endereço Oficial</h3>
+                  <p class="text-sm text-slate-700 mt-0.5">Rua Francisco Henrique, Lagoinha - CE</p>
+                  <p class="text-xs theme-text-accent font-semibold mt-1">Atendendo Lagoinha, Paraipaba, Paracuru e região</p>
+                </div>
+              </div>
+
+              <!-- Horários -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full theme-bg-deep border theme-border flex items-center justify-center shrink-0 theme-text-accent">
+                  <i class="fa-regular fa-clock text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold theme-text-deep text-base">Horário de Funcionamento</h3>
+                  <p class="text-sm text-slate-700 mt-0.5"><strong>Quarta a Domingo:</strong> 12h00 às 23h00</p>
+                  <p class="text-xs text-slate-500 mt-0.5">Segunda e Terça: fechado para preparação temática</p>
+                </div>
+              </div>
+
+              <!-- Botão Circular do Instagram (@CwT.oficial) -->
+              <div class="flex items-center gap-4 pt-1">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial @CwT.oficial" class="w-12 h-12 rounded-full theme-bg-deep border-2 theme-border flex items-center justify-center shrink-0 theme-text-accent hover:scale-105 transition shadow-md">
+                  <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <div>
+                  <h3 class="font-bold theme-text-deep text-base">Instagram Oficial</h3>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold theme-text-deep hover:opacity-75 transition">
+                    @CwT.oficial
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <button type="button" onclick="openReservationModal()" class="gold-btn font-bold text-xs uppercase tracking-widest px-7 py-4 rounded-lg cursor-pointer min-h-[48px]">
+                Emitir Passaporte de Reserva
+              </button>
+            </div>
+          </div>
+
+          <!-- Coluna Tabela Rápida de Rotação Mensal com Bandeiras Reais -->
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl overflow-hidden theme-bg-deep text-white border theme-border shadow-luxury">
+              <div class="px-6 py-4 bg-black/30 border-b theme-border flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-widest theme-text-accent-soft">
+                  <i class="fa-solid fa-calendar-week mr-2 theme-text-accent"></i>Tabela de Rotação Mensal
+                </span>
+                <span class="text-[11px] text-white/80">Qua a Dom</span>
+              </div>
+
+              <div class="divide-y divide-white/10 text-sm">
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3">
+                  <div>
+                    <span class="font-bold text-white">1ª Semana (Qua a Sex)</span>
+                    <span class="block text-xs text-white/70">Dias 1 a 7 do mês</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('Brasil', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent hover:opacity-85 text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>Brasil • Feijoada</span>
+                  </button>
+                </div>
+
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3">
+                  <div>
+                    <span class="font-bold text-white">2ª Semana (Qua a Sex)</span>
+                    <span class="block text-xs text-white/70">Dias 8 a 14 do mês</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('México', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent hover:opacity-85 text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/mx.png" alt="México" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>México • Burrito</span>
+                  </button>
+                </div>
+
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3">
+                  <div>
+                    <span class="font-bold text-white">3ª Semana (Qua a Sex)</span>
+                    <span class="block text-xs text-white/70">Dias 15 a 21 do mês</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('França', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent hover:opacity-85 text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="França" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>França • Steak au Poivre</span>
+                  </button>
+                </div>
+
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3">
+                  <div>
+                    <span class="font-bold text-white">4ª Semana (Qua a Sex)</span>
+                    <span class="block text-xs text-white/70">Dia 22 ao fim do mês</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('Itália', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent hover:opacity-85 text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/it.png" alt="Itália" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>Itália • Carbonara</span>
+                  </button>
+                </div>
+
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3 bg-white/5">
+                  <div>
+                    <span class="font-bold text-white">1º e 2º Fins de Semana</span>
+                    <span class="block text-xs text-white/70">Sábados e Domingos</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('Espanha', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent-soft hover:text-white text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Espanha" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>Espanha • Bacalao al Pil-Pil</span>
+                  </button>
+                </div>
+
+                <div class="px-6 py-3.5 flex items-center justify-between gap-3 bg-white/5">
+                  <div>
+                    <span class="font-bold text-white">3º e 4º+ Fins de Semana</span>
+                    <span class="block text-xs text-white/70">Sábados e Domingos</span>
+                  </div>
+                  <button type="button" onclick="openImmersiveMenuTab('Grécia', true)" class="inline-flex items-center gap-2 font-display font-bold theme-text-accent-soft hover:text-white text-base cursor-pointer text-right">
+                    <img src="https://flagcdn.com/w40/gr.png" alt="Grécia" class="w-5 h-3.5 object-cover rounded-[2px]" />
+                    <span>Grécia • Moussaka</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       VISÃO / ABA 2: CARDÁPIO INTERNACIONAL IMERSIVO COM BANDEIRAS REAIS
+  ====================================================================== -->
+  <section id="view-menu-tab" class="hidden min-h-screen pt-32 lg:pt-36 theme-bg-deep text-white relative z-10 tab-fade-in">
+
+    <!-- Barra Superior de Navegação da Aba do Cardápio -->
+    <div class="bg-black/45 border-b theme-border px-4 sm:px-6 lg:px-8 py-3.5 sticky top-32 lg:top-36 z-30 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="switchMainTab('home')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border theme-border theme-text-accent-soft hover:text-white text-xs font-bold uppercase tracking-wider transition cursor-pointer">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Voltar ao Início</span>
+          </button>
+          <span class="hidden sm:inline-block text-xs text-white/80">
+            Aba Exclusiva • <strong class="theme-text-accent">Cardápio Internacional CWT</strong>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button type="button" onclick="openStandaloneMenuNewBrowserTab(activeCountryFilter)" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-white/25 hover:border-white text-white/90 hover:text-white text-[11px] font-bold uppercase tracking-wider transition cursor-pointer" title="Abrir este cardápio em uma nova aba separada do navegador">
+            <i class="fa-solid fa-up-right-from-square theme-text-accent"></i>
+            <span>Abrir em Nova Aba</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PALCO IMERSIVO DO PAÍS SELECIONADO (COM BANDEIRA REAL TREMULANDO E DECORAÇÃO CULTURAL) -->
+    <div id="country-immersive-stage" class="relative overflow-hidden border-b theme-border theme-gradient transition-all duration-700">
+      <!-- Camada de Decoração Arquitetônica e Partículas do País -->
+      <div id="flag-animation-layer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+
+      <!-- Conteúdo Centralizado do Palco -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/55 border theme-border theme-text-accent-soft text-[11px] font-bold uppercase tracking-widest mb-3 backdrop-blur-sm">
+              <i class="fa-solid fa-earth-americas theme-text-accent"></i>
+              <span id="stage-schedule-tag">6 Destinos • Rotação Mensal</span>
+            </div>
+
+            <h1 id="stage-country-title" class="font-display text-3xl sm:text-5xl font-extrabold text-white drop-shadow-md">
+              Volta ao Mundo Gastronômica
+            </h1>
+
+            <p id="stage-country-subtitle" class="mt-3 text-sm sm:text-base lg:text-lg text-white/95 leading-relaxed drop-shadow">
+              Selecione qualquer bandeira abaixo para vestir todo o site com a ambientação visual exclusiva de cada país e explorar suas entradas, pratos principais e sobremesas.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <button type="button" id="stage-reserve-btn" onclick="openReservationModal()" class="gold-btn font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-lg cursor-pointer inline-flex items-center gap-2">
+                <i class="fa-solid fa-passport"></i>
+                <span id="stage-reserve-label">Reservar Experiência</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bandeira Real Animada em Destaque no Palco -->
+          <div id="stage-flag-showcase" class="shrink-0 flex flex-col items-center justify-center"></div>
+
+        </div>
+
+        <!-- Seletor Interativo com Bandeiras Reais -->
+        <div class="mt-10 pt-7 border-t border-white/20">
+          <p class="text-center text-[11px] font-bold uppercase tracking-widest theme-text-accent-soft mb-4">
+            Escolha o Destino para Transformar o Site & Ativar a Bandeira
+          </p>
+          <div class="flex items-center justify-start sm:justify-center gap-2.5 overflow-x-auto no-scrollbar pb-2 px-1" role="tablist" aria-label="Filtrar cardápio por país">
+            <button type="button" onclick="setCountryFilter('Todos')" data-country="Todos" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-gold-400 bg-gold-400 text-royal-950 transition cursor-pointer shadow-md flex items-center gap-2">
+              <i class="fa-solid fa-globe"></i>
+              <span>Todos (18 Pratos)</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('Brasil')" data-country="Brasil" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>Brasil</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('México')" data-country="México" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/mx.png" alt="México" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>México</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('França')" data-country="França" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/fr.png" alt="França" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>França</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('Itália')" data-country="Itália" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/it.png" alt="Itália" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>Itália</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('Espanha')" data-country="Espanha" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/es.png" alt="Espanha" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>Espanha</span>
+            </button>
+            <button type="button" onclick="setCountryFilter('Grécia')" data-country="Grécia" class="country-pill shrink-0 min-h-[46px] px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 bg-black/45 text-white hover:bg-black/65 transition cursor-pointer flex items-center gap-2">
+              <img src="https://flagcdn.com/w40/gr.png" alt="Grécia" class="w-5 h-3.5 object-cover rounded-[2px]" />
+              <span>Grécia</span>
+            </button>
+          </div>
+
+          <!-- Filtro por Categoria -->
+          <div class="mt-3 flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-1 px-1" role="tablist" aria-label="Filtrar cardápio por categoria">
+            <button type="button" onclick="setCategoryFilter('all')" data-cat="all" class="cat-pill shrink-0 min-h-[42px] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest border border-white bg-white text-royal-950 transition cursor-pointer">
+              Todas as Categorias
+            </button>
+            <button type="button" onclick="setCategoryFilter('entradas')" data-cat="entradas" class="cat-pill shrink-0 min-h-[42px] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest border border-white/35 bg-black/40 text-white hover:border-white transition cursor-pointer">
+              Entradas
+            </button>
+            <button type="button" onclick="setCategoryFilter('principais')" data-cat="principais" class="cat-pill shrink-0 min-h-[42px] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest border border-white/35 bg-black/40 text-white hover:border-white transition cursor-pointer">
+              Pratos Principais
+            </button>
+            <button type="button" onclick="setCategoryFilter('sobremesas')" data-cat="sobremesas" class="cat-pill shrink-0 min-h-[42px] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest border border-white/35 bg-black/40 text-white hover:border-white transition cursor-pointer">
+              Sobremesas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grade dos Pratos do Cardápio Imersivo -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+    </div>
+
+  </section>
+
+  <!-- =====================================================================
+       RODAPÉ OFICIAL DINÂMICO
+  ====================================================================== -->
+  <footer class="theme-bg-deep text-white/85 pt-14 pb-10 border-t theme-border relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
+
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3.5">
+            <div class="w-14 h-14 shrink-0">
+              <svg viewBox="0 0 340 310" class="w-full h-full" aria-label="Logomarca Oficial Culinary World Tour">
+                <use href="#cwt-official-logo"></use>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display text-lg sm:text-xl font-bold tracking-wide text-white uppercase">
+                CULINARY <span class="theme-text-accent">WORLD TOUR</span>
+              </span>
+              <p class="text-xs theme-text-accent-soft font-medium mt-0.5">Uma volta ao mundo através da alta gastronomia</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-white/80 max-w-md leading-relaxed">
+            O primeiro restaurante com rotação internacional de sabores em Lagoinha-CE. 6 Países, 6 experiências inesquecíveis em um só lugar.
+          </p>
+          <div class="mt-5">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-widest theme-text-accent hover:opacity-80 transition">
+              <span class="w-9 h-9 rounded-full border theme-border flex items-center justify-center theme-text-accent">
+                <i class="fa-brands fa-instagram text-base"></i>
+              </span>
+              <span>@CwT.oficial</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest theme-text-accent-soft mb-4">Navegação</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><button type="button" onclick="switchMainTab('home', '#experiencias')" class="hover:opacity-80 transition cursor-pointer">6 Países, 6 Experiências</button></li>
+            <li><button type="button" onclick="switchMainTab('home', '#calendario')" class="hover:opacity-80 transition cursor-pointer">Calendário Mensal</button></li>
+            <li><button type="button" onclick="openImmersiveMenuTab(activeCountryFilter, true)" class="hover:opacity-80 transition cursor-pointer theme-text-accent font-semibold">Cardápio Internacional Imersivo</button></li>
+            <li><button type="button" onclick="switchMainTab('home', '#restaurante')" class="hover:opacity-80 transition cursor-pointer">O Restaurante & Essência</button></li>
+            <li><button type="button" onclick="switchMainTab('home', '#localizacao')" class="hover:opacity-80 transition cursor-pointer">Localização</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest theme-text-accent-soft mb-4">Unidade Lagoinha</h4>
+          <ul class="space-y-2.5 text-sm text-white/85">
+            <li>Rua Francisco Henrique, Lagoinha - CE</li>
+            <li>Quarta a Domingo • 12h às 23h</li>
+            <li>Lagoinha • Paraipaba • Paracuru</li>
+            <li class="pt-1">
+              <button type="button" onclick="openReservationModal()" class="theme-text-accent font-bold hover:underline cursor-pointer">
+                Reservar Mesa →
+              </button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between text-xs text-white/70 gap-3 text-center">
+        <p>© 2026 Culinary World Tour (CWT). Todos os direitos reservados.</p>
+        <p>Lagoinha • Ceará • Brasil</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       MODAL DE DETALHES DO PRATO
+  ====================================================================== -->
+  <div id="dish-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="dish-modal-title">
+    <div class="bg-white text-slate-900 w-full max-w-lg max-h-[92vh] overflow-y-auto my-auto rounded-2xl shadow-2xl border theme-border">
+      <div class="relative h-56 sm:h-64 bg-neutral-900">
+        <img id="dish-modal-img" src="" alt="" class="w-full h-full object-cover object-center" />
+        <button type="button" onclick="closeDishModal()" aria-label="Fechar detalhes" class="absolute top-3.5 right-3.5 w-10 h-10 rounded-full bg-black/75 text-white hover:opacity-80 flex items-center justify-center cursor-pointer">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+        <span id="dish-modal-badge" class="absolute bottom-3.5 left-4 px-3 py-1 rounded-full gold-btn text-[10px] font-bold uppercase tracking-widest"></span>
+      </div>
+
+      <div class="p-5 sm:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <span id="dish-modal-country" class="text-xs font-bold uppercase tracking-widest theme-text-accent"></span>
+            <h3 id="dish-modal-title" class="font-display text-2xl font-bold theme-text-deep mt-1"></h3>
+          </div>
+          <span id="dish-modal-price" class="font-display text-2xl font-bold theme-text-deep shrink-0"></span>
+        </div>
+
+        <p id="dish-modal-desc" class="text-sm text-slate-700 mt-4 leading-relaxed"></p>
+
+        <div class="mt-4 p-3.5 rounded-xl theme-surface-tint border theme-border space-y-2 text-xs text-slate-700">
+          <p><strong class="theme-text-deep">Harmonização & Notas:</strong> <span id="dish-modal-pairing"></span></p>
+          <p><strong class="theme-text-deep">Período no Calendário:</strong> <span id="dish-modal-schedule"></span></p>
+        </div>
+
+        <div class="mt-6">
+          <button id="dish-modal-reserve-btn" type="button" class="w-full min-h-[48px] gold-btn font-bold text-xs uppercase tracking-widest py-3.5 rounded-lg cursor-pointer">
+            Reservar para o Período Deste País
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL PASSAPORTE DE RESERVA CWT
+  ====================================================================== -->
+  <div id="reservation-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="res-modal-title">
+    <div class="bg-white text-slate-900 w-full max-w-xl max-h-[92vh] overflow-y-auto my-auto rounded-2xl shadow-2xl border theme-border">
+
+      <!-- Header do Modal -->
+      <div class="theme-gradient px-5 sm:px-6 py-4 flex items-center justify-between border-b theme-border">
+        <div class="flex items-center gap-3">
+          <svg viewBox="0 0 340 310" class="w-11 h-11 shrink-0" aria-label="Logo Oficial CWT">
+            <use href="#cwt-official-logo"></use>
+          </svg>
+          <div>
+            <span class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft">Passaporte Gastronômico CWT</span>
+            <h3 id="res-modal-title" class="font-display text-lg sm:text-xl font-bold text-white">Reserve Sua Experiência</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeReservationModal()" aria-label="Fechar reserva" class="w-10 h-10 rounded-full text-white/85 hover:text-white flex items-center justify-center cursor-pointer">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Formulário de Reserva -->
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="p-5 sm:p-7 space-y-4">
+        <div>
+          <label for="booking-name" class="block text-xs font-bold uppercase tracking-wider theme-text-deep mb-1">Nome Completo do Passageiro</label>
+          <input id="booking-name" type="text" required placeholder="Ex: Maria Clara Almeida" class="w-full min-h-[44px] px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-slate-700 focus:outline-none text-sm text-slate-900" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="booking-phone" class="block text-xs font-bold uppercase tracking-wider theme-text-deep mb-1">WhatsApp / Telefone</label>
+            <input id="booking-phone" type="tel" required placeholder="(85) 99999-0000" class="w-full min-h-[44px] px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-slate-700 focus:outline-none text-sm text-slate-900" />
+          </div>
+
+          <div>
+            <label for="booking-guests" class="block text-xs font-bold uppercase tracking-wider theme-text-deep mb-1">Número de Convidados</label>
+            <select id="booking-guests" class="w-full min-h-[44px] px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-slate-700 focus:outline-none text-sm text-slate-900 bg-white">
+              <option value="1 Pessoa">1 Pessoa</option>
+              <option value="2 Pessoas" selected>2 Pessoas</option>
+              <option value="3 Pessoas">3 Pessoas</option>
+              <option value="4 Pessoas">4 Pessoas</option>
+              <option value="5 Pessoas">5 Pessoas</option>
+              <option value="6 Pessoas">6 Pessoas</option>
+              <option value="7 Pessoas">7 Pessoas</option>
+              <option value="8 Pessoas">8 Pessoas</option>
+              <option value="9 Pessoas">9 Pessoas</option>
+              <option value="10 Pessoas">10 Pessoas</option>
+              <option value="11 Pessoas">11 Pessoas</option>
+              <option value="12 Pessoas">12 Pessoas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="booking-date" class="block text-xs font-bold uppercase tracking-wider theme-text-deep mb-1">Data Desejada</label>
+            <input id="booking-date" type="date" required onchange="syncModalWithDate()" class="w-full min-h-[44px] px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-slate-700 focus:outline-none text-sm text-slate-900" />
+          </div>
+
+          <div>
+            <label for="booking-time" class="block text-xs font-bold uppercase tracking-wider theme-text-deep mb-1">Turno & Horário</label>
+            <select id="booking-time" class="w-full min-h-[44px] px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-slate-700 focus:outline-none text-sm text-slate-900 bg-white">
+              <option value="12:30 • Almoço">12:30 • Almoço</option>
+              <option value="14:00 • Almoço">14:00 • Almoço</option>
+              <option value="19:30 • Jantar" selected>19:30 • Jantar</option>
+              <option value="20:30 • Jantar">20:30 • Jantar</option>
+              <option value="21:30 • Jantar">21:30 • Jantar</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Aviso no Modal caso seja Segunda ou Terça -->
+        <div id="modal-closed-alert" class="hidden p-3.5 rounded-xl bg-amber-50 border border-amber-400 text-amber-950 text-xs space-y-2">
+          <p>
+            <i class="fa-solid fa-triangle-exclamation text-amber-600 mr-1.5"></i>
+            <strong>Aviso de Funcionamento:</strong> O Culinary World Tour abre de <strong>Quarta a Domingo (12h às 23h)</strong>. Segundas e terças são reservadas para preparação temática.
+          </p>
+          <button type="button" onclick="snapModalDateToOpenDay()" class="px-3 py-1.5 rounded theme-bg-deep theme-text-accent-soft font-bold uppercase tracking-wider text-[11px] cursor-pointer">
+            Ajustar para o próximo dia aberto desta semana
+          </button>
+        </div>
+
+        <!-- Cartão de Destino Bloqueado Automaticamente pela Data -->
+        <div class="p-4 rounded-xl theme-bg-deep text-white border theme-border">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft">
+              <i class="fa-solid fa-lock mr-1"></i>Tema Definido pelo Calendário
+            </span>
+            <span id="modal-period-badge" class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-black/45 theme-text-accent border theme-border"></span>
+          </div>
+          <p id="modal-country-title" class="font-display text-xl font-bold text-white mt-1.5"></p>
+          <p id="modal-country-dish" class="text-xs theme-text-accent-soft mt-1"></p>
+        </div>
+
+        <button id="booking-submit-btn" type="submit" class="w-full min-h-[48px] gold-btn font-bold text-xs uppercase tracking-widest py-4 rounded-lg cursor-pointer">
+          Confirmar & Gerar Passaporte CWT
+        </button>
+      </form>
+
+      <!-- Cartão de Embarque / Passaporte Gastronômico Confirmado -->
+      <div id="booking-passport-view" class="hidden p-5 sm:p-7 theme-surface-tint">
+        <div class="rounded-2xl overflow-hidden border-2 theme-border bg-white shadow-xl">
+          <!-- Cabeçalho do Passaporte -->
+          <div class="theme-gradient px-5 py-4 flex items-center justify-between text-white border-b-2 border-dashed theme-border">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 340 310" class="w-10 h-10 shrink-0" aria-label="Logo Oficial CWT">
+                <use href="#cwt-official-logo"></use>
+              </svg>
+              <div>
+                <p class="font-display text-xs font-bold tracking-widest theme-text-accent-soft uppercase">Passaporte Gastronômico CWT</p>
+                <p class="text-[11px] text-white/85">Culinary World Tour • Lagoinha-CE</p>
+              </div>
+            </div>
+            <span id="passport-code" class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-black/50 theme-text-accent border theme-border">
+              #CWT-2026
+            </span>
+          </div>
+
+          <!-- Corpo do Bilhete -->
+          <div class="p-5 sm:p-6 relative">
+            <div class="hidden sm:flex absolute right-5 top-5 w-24 h-24 rounded-full border-2 theme-border flex-col items-center justify-center rotate-12 pointer-events-none select-none">
+              <span class="text-[8px] font-bold uppercase tracking-widest theme-text-accent">LAGOINHA-CE</span>
+              <span class="font-display text-xs font-extrabold tracking-wider my-0.5 theme-text-deep">EMBARQUE</span>
+              <span class="text-[8px] font-bold uppercase tracking-widest theme-text-accent">CONFIRMADO</span>
+            </div>
+
+            <div class="space-y-3 sm:pr-24">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Passageiro Titular</span>
+                <p id="passport-passenger" class="font-display text-xl font-bold theme-text-deep"></p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 pt-2.5 border-t border-gray-200">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Data & Horário</span>
+                  <p id="passport-datetime" class="text-xs font-bold theme-text-deep mt-0.5"></p>
+                </div>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Convidados</span>
+                  <p id="passport-guests" class="text-xs font-bold theme-text-deep mt-0.5"></p>
+                </div>
+                <div class="col-span-2">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Destino Temático da Data</span>
+                  <p id="passport-destination" class="text-sm font-bold theme-text-accent mt-0.5"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-dashed border-gray-300 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-600">
+              <span>Rua Francisco Henrique, Lagoinha - CE</span>
+              <span class="font-bold theme-text-deep">@CwT.oficial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 flex justify-center">
+          <button type="button" onclick="closeReservationModal()" class="min-h-[46px] theme-bg-deep hover:opacity-90 text-white font-bold text-xs uppercase tracking-widest px-8 py-3.5 rounded-lg transition cursor-pointer">
+            Concluir Embarque
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: TEMATIZAÇÃO GLOBAL POR PAÍS, BANDEIRAS REAIS & CARDÁPIO
+  ====================================================================== -->
+  <script>
+    // Fallback SVG limpo caso alguma imagem externa falhe
+    function createFallbackSvg(title, subtitle) {
+      const cleanTitle = String(title || 'CULINARY WORLD TOUR').replace(/[<>&"]/g, '');
+      const cleanSub = String(subtitle || '6 PAÍSES • 6 EXPERIÊNCIAS').replace(/[<>&"]/g, '');
+      const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#052256"/>
+              <stop offset="55%" stop-color="#0A46A8"/>
+              <stop offset="100%" stop-color="#07317A"/>
+            </linearGradient>
+          </defs>
+          <rect width="960" height="640" fill="url(#g)"/>
+          <circle cx="480" cy="260" r="140" fill="none" stroke="#DFB960" stroke-width="2" stroke-opacity="0.4"/>
+          <text x="480" y="310" fill="#DFB960" font-size="32" font-family="Georgia, serif" font-weight="bold" text-anchor="middle">${cleanTitle}</text>
+          <text x="480" y="352" fill="#FFFFFF" font-size="16" font-family="sans-serif" letter-spacing="4" text-anchor="middle">${cleanSub}</text>
+        </svg>
+      `.trim();
+      return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    // =========================================================================
+    // CONFIGURAÇÃO COMPLETA DE TEMA GLOBAL POR PAÍS (CORES, BANDEIRA REAL E CENOGRAFIA)
+    // =========================================================================
+    const countryGlobalThemes = {
+      'Todos': {
+        label: 'Oficial CWT',
+        flagUrl: '',
+        schedule: '6 Países • 6 Experiências em Rotação Mensal',
+        heroTagline: 'Uma volta ao mundo através da alta gastronomia',
+        heroDesc: 'Em Lagoinha-CE, cada semana e fim de semana do mês transportam você para a mesa autêntica de um destino internacional. Clique em qualquer país para transformar o site inteiro com sua bandeira, cores e sabores.',
+        stageTitle: 'Volta ao Mundo Gastronômica',
+        stageSubtitle: 'Selecione qualquer bandeira abaixo para vestir todo o site com a ambientação visual exclusiva de cada país e explorar suas entradas, pratos principais e sobremesas.',
+        heroBg: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#052256',
+          '--theme-bg-mid': '#07317A',
+          '--theme-bg-bright': '#1256C4',
+          '--theme-surface-tint': '#F8F9FB',
+          '--theme-accent': '#DFB960',
+          '--theme-accent-strong': '#C9A24B',
+          '--theme-accent-soft': '#EAD08E',
+          '--theme-accent-text': '#052256',
+          '--theme-border-alpha': 'rgba(223, 185, 96, 0.45)',
+          '--theme-glow': 'rgba(201, 162, 75, 0.42)'
+        },
+        decorHtml: `
+          <svg class="hidden md:block absolute right-8 top-28 w-[420px] h-44 text-gold-400/45" viewBox="0 0 430 180" fill="none">
+            <path d="M10 140 C 85 175, 125 82, 82 74 C 45 66, 62 145, 162 138 C 260 131, 325 76, 386 50" stroke="currentColor" stroke-width="2.2" stroke-dasharray="9 8" stroke-linecap="round"/>
+            <path d="M392 42 L426 34 L408 62 L402 51 L392 42 Z" fill="currentColor"/>
+          </svg>
+        `,
+        backdropSvg: ''
+      },
+      'Brasil': {
+        label: 'Brasil • 1ª Semana',
+        flagUrl: 'https://flagcdn.com/w320/br.png',
+        schedule: '1ª Semana do Mês • Quarta a Sexta',
+        heroTagline: 'Brasil: Hospitalidade Tropical & Sabores da Nossa Terra',
+        heroDesc: 'Ambientação especial verde-esmeralda e ouro celebrando a primeira semana do mês com Feijoada completa, Pão de Alho na brasa e Torta de Cupuaçu.',
+        stageTitle: 'Brasil • Sabores da Nossa Terra',
+        stageSubtitle: 'Atmosfera verde-esmeralda, dourado solar e o azul estrelado do Cruzeiro do Sul celebrando os clássicos brasileiros da 1ª semana.',
+        heroBg: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#032B1D',
+          '--theme-bg-mid': '#065A3B',
+          '--theme-bg-bright': '#009C3B',
+          '--theme-surface-tint': '#F2FBF7',
+          '--theme-accent': '#FFDF00',
+          '--theme-accent-strong': '#E5B800',
+          '--theme-accent-soft': '#FFF078',
+          '--theme-accent-text': '#032B1D',
+          '--theme-border-alpha': 'rgba(255, 223, 0, 0.50)',
+          '--theme-glow': 'rgba(255, 223, 0, 0.42)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-20 ribbon-flow" style="background-image: linear-gradient(125deg, #009C3B 0%, #FFDF00 50%, #002776 100%);"></div>
+          <!-- Estrelas do Cruzeiro do Sul flutuantes -->
+          <i class="fa-solid fa-star ambient-float absolute top-28 left-[18%] text-yellow-300/75 text-xs"></i>
+          <i class="fa-solid fa-star ambient-float absolute top-40 left-[24%] text-white/80 text-[10px]" style="animation-delay: 0.7s;"></i>
+          <i class="fa-solid fa-star ambient-float absolute top-24 left-[29%] text-yellow-300/75 text-xs" style="animation-delay: 1.4s;"></i>
+          <i class="fa-solid fa-star ambient-float absolute top-48 left-[22%] text-yellow-200/85 text-sm" style="animation-delay: 2.1s;"></i>
+          <!-- Ondas estilizadas de Copacabana na base -->
+          <svg class="absolute bottom-0 left-0 right-0 w-full h-14 opacity-20" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 Q75,5 150,30 T300,30 T450,30 T600,30 T750,30 T900,30 T1050,30 T1200,30 L1200,60 L0,60 Z" fill="#FFDF00"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-br" width="120" height="60" patternUnits="userSpaceOnUse">
+                <path d="M0,30 Q30,5 60,30 T120,30" fill="none" stroke="#009C3B" stroke-width="4"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-br)"/>
+          </svg>
+        `
+      },
+      'México': {
+        label: 'México • 2ª Semana',
+        flagUrl: 'https://flagcdn.com/w320/mx.png',
+        schedule: '2ª Semana do Mês • Quarta a Sexta',
+        heroTagline: 'México: Tradição Ancestral, Cores & Especiarias',
+        heroDesc: 'Ambientação vibrante inspirada na arte mexicana celebrando a segunda semana do mês com Quesadillas artesanais, Burrito e Pastel de Tres Leches.',
+        stageTitle: 'México • Tradição & Especiarias',
+        stageSubtitle: 'Verde agave, branco puro e vermelho terracota envolvem o salão com o brilho do sol asteca e o sabor autêntico da 2ª semana.',
+        heroBg: 'https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#062E20',
+          '--theme-bg-mid': '#006847',
+          '--theme-bg-bright': '#CE1126',
+          '--theme-surface-tint': '#FDF7F6',
+          '--theme-accent': '#F5B841',
+          '--theme-accent-strong': '#D9941E',
+          '--theme-accent-soft': '#FCE09B',
+          '--theme-accent-text': '#062E20',
+          '--theme-border-alpha': 'rgba(245, 184, 65, 0.50)',
+          '--theme-glow': 'rgba(206, 17, 38, 0.40)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-20 ribbon-flow" style="background-image: linear-gradient(90deg, #006847 0%, #FFFFFF 50%, #CE1126 100%);"></div>
+          <!-- Mandala / Calendário Solar Asteca rotativo -->
+          <svg class="absolute -right-16 top-16 w-80 h-80 text-amber-300/25 slow-orbit" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="88" stroke="currentColor" stroke-width="2" stroke-dasharray="8 4"/>
+            <circle cx="100" cy="100" r="66" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="100,14 114,46 148,32 134,66 168,80 134,94 148,128 114,114 100,146 86,114 52,128 66,94 32,80 66,66 52,32 86,46" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-mx" width="80" height="80" patternUnits="userSpaceOnUse">
+                <polygon points="40,5 75,40 40,75 5,40" fill="none" stroke="#006847" stroke-width="2"/>
+                <circle cx="40" cy="40" r="10" fill="none" stroke="#CE1126" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-mx)"/>
+          </svg>
+        `
+      },
+      'França': {
+        label: 'França • 3ª Semana',
+        flagUrl: 'https://flagcdn.com/w320/fr.png',
+        schedule: '3ª Semana do Mês • Quarta a Sexta',
+        heroTagline: 'França: Alta Gastronomia Parisiense & Elegância Clássica',
+        heroDesc: 'Ambientação tricolor azul-imperial, branco e bordô celebrando a terceira semana do mês com Camembert au Four, Steak au Poivre e Moelleux au Chocolat.',
+        stageTitle: 'França • Alta Gastronomia Parisiense',
+        stageSubtitle: 'O refinamento das noites de Paris em azul-imperial, branco pérola e vermelho bordô celebrando a 3ª semana do calendário.',
+        heroBg: 'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#07184A',
+          '--theme-bg-mid': '#002395',
+          '--theme-bg-bright': '#9E1B32',
+          '--theme-surface-tint': '#F6F8FC',
+          '--theme-accent': '#DFB960',
+          '--theme-accent-strong': '#C9A24B',
+          '--theme-accent-soft': '#F2DC9B',
+          '--theme-accent-text': '#07184A',
+          '--theme-border-alpha': 'rgba(223, 185, 96, 0.50)',
+          '--theme-glow': 'rgba(0, 35, 149, 0.45)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-22 ribbon-flow" style="background-image: linear-gradient(90deg, #002395 0%, #FFFFFF 50%, #ED2939 100%);"></div>
+          <!-- Silhueta Arquitetônica da Torre Eiffel -->
+          <svg class="hidden md:block absolute right-10 bottom-0 h-80 w-48 text-gold-300/25" viewBox="0 0 160 280" fill="none">
+            <path d="M80 10 L74 75 L62 155 L32 270 M80 10 L86 75 L98 155 L128 270" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="54" y1="155" x2="106" y2="155" stroke="currentColor" stroke-width="3"/>
+            <line x1="68" y1="75" x2="92" y2="75" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M52 270 Q80 215 108 270" stroke="currentColor" stroke-width="2.5"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-fr" width="90" height="90" patternUnits="userSpaceOnUse">
+                <circle cx="45" cy="45" r="30" fill="none" stroke="#002395" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <path d="M45 22 L49 41 L68 45 L49 49 L45 68 L41 49 L22 45 L41 41 Z" fill="none" stroke="#ED2939" stroke-width="1.2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-fr)"/>
+          </svg>
+        `
+      },
+      'Itália': {
+        label: 'Itália • 4ª Semana',
+        flagUrl: 'https://flagcdn.com/w320/it.png',
+        schedule: '4ª Semana do Mês • Quarta a Sexta',
+        heroTagline: 'Itália: Tradição Romana, Massas Artesanais & Paixão',
+        heroDesc: 'Ambientação verde-oliva, branco-mármore e vermelho-tomate celebrando a quarta semana do mês com Bruschetta, Carbonara clássico e Tiramisù.',
+        stageTitle: 'Itália • Arte, Massas & Tradição',
+        stageSubtitle: 'Verde manjericão, branco toscano e vermelho intenso celebrando a autêntica gastronomia italiana na 4ª semana do mês.',
+        heroBg: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#0B3620',
+          '--theme-bg-mid': '#006B38',
+          '--theme-bg-bright': '#B8202D',
+          '--theme-surface-tint': '#FAF8F5',
+          '--theme-accent': '#E5C16C',
+          '--theme-accent-strong': '#C99E42',
+          '--theme-accent-soft': '#F5DF9E',
+          '--theme-accent-text': '#0B3620',
+          '--theme-border-alpha': 'rgba(229, 193, 108, 0.50)',
+          '--theme-glow': 'rgba(0, 146, 70, 0.42)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-22 ribbon-flow" style="background-image: linear-gradient(90deg, #009246 0%, #FFFFFF 50%, #CE2B37 100%);"></div>
+          <!-- Arcos Romanos Estilizados -->
+          <svg class="hidden md:block absolute right-8 bottom-0 w-96 h-44 text-white/15" viewBox="0 0 360 160" fill="none">
+            <path d="M20 160 L20 70 A 40 40 0 0 1 100 70 L100 160" stroke="currentColor" stroke-width="3"/>
+            <path d="M140 160 L140 70 A 40 40 0 0 1 220 70 L220 160" stroke="currentColor" stroke-width="3"/>
+            <path d="M260 160 L260 70 A 40 40 0 0 1 340 70 L340 160" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-it" width="100" height="100" patternUnits="userSpaceOnUse">
+                <path d="M10 100 L10 45 A 40 40 0 0 1 90 45 L90 100" fill="none" stroke="#009246" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-it)"/>
+          </svg>
+        `
+      },
+      'Espanha': {
+        label: 'Espanha • 1º e 2º FDS',
+        flagUrl: 'https://flagcdn.com/w320/es.png',
+        schedule: '1º e 2º Fins de Semana • Sábado e Domingo',
+        heroTagline: 'Espanha: Paixão Ibérica, Ouro Solar & Alta Cozinha Basca',
+        heroDesc: 'Ambientação rubi e ouro-açafrão celebrando os dois primeiros fins de semana do mês com Patatas Bravas, Bacalao al Pil-Pil e Churros.',
+        stageTitle: 'Espanha • Paixão Ibérica & Sol',
+        stageSubtitle: 'O vermelho sangria e o ouro solar da bandeira espanhola iluminam os sábados e domingos dos 1º e 2º fins de semana.',
+        heroBg: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#5C0B10',
+          '--theme-bg-mid': '#9E141B',
+          '--theme-bg-bright': '#D49A00',
+          '--theme-surface-tint': '#FDF9F2',
+          '--theme-accent': '#F1BF00',
+          '--theme-accent-strong': '#D1A000',
+          '--theme-accent-soft': '#FFE066',
+          '--theme-accent-text': '#4A080C',
+          '--theme-border-alpha': 'rgba(241, 191, 0, 0.55)',
+          '--theme-glow': 'rgba(241, 191, 0, 0.45)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-24 ribbon-flow" style="background-image: linear-gradient(180deg, #AA151B 0%, #F1BF00 50%, #AA151B 100%);"></div>
+          <!-- Leque / Rosácea Sevilhana -->
+          <svg class="hidden md:block absolute right-10 top-24 w-72 h-72 text-yellow-300/20 slow-orbit" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="2" stroke-dasharray="10 6"/>
+            <circle cx="100" cy="100" r="55" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-es" width="80" height="80" patternUnits="userSpaceOnUse">
+                <circle cx="40" cy="40" r="26" fill="none" stroke="#AA151B" stroke-width="1.8"/>
+                <polygon points="40,14 66,40 40,66 14,40" fill="none" stroke="#D49A00" stroke-width="1.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-es)"/>
+          </svg>
+        `
+      },
+      'Grécia': {
+        label: 'Grécia • 3º e 4º FDS',
+        flagUrl: 'https://flagcdn.com/w320/gr.png',
+        schedule: '3º e 4º Fins de Semana • Sábado e Domingo',
+        heroTagline: 'Grécia: Brisa do Mar Egeu & Sabores Mediterrâneos',
+        heroDesc: 'Ambientação azul-egeu e branco-mármore celebrando os últimos fins de semana do mês com Keftedes, Moussaka gratinada e Baclava no mel.',
+        stageTitle: 'Grécia • Brisa do Mar Egeu',
+        stageSubtitle: 'As ondas em azul mediterrâneo e branco cristalino de Santorini envolvem o salão nos 3º e 4º fins de semana do mês.',
+        heroBg: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=80',
+        vars: {
+          '--theme-bg-deep': '#062D5E',
+          '--theme-bg-mid': '#0D5EAF',
+          '--theme-bg-bright': '#1E82E6',
+          '--theme-surface-tint': '#F3F8FE',
+          '--theme-accent': '#EAD08E',
+          '--theme-accent-strong': '#C9A24B',
+          '--theme-accent-soft': '#FFFFFF',
+          '--theme-accent-text': '#062D5E',
+          '--theme-border-alpha': 'rgba(255, 255, 255, 0.45)',
+          '--theme-glow': 'rgba(13, 94, 175, 0.45)'
+        },
+        decorHtml: `
+          <div class="absolute inset-0 opacity-20 ribbon-flow" style="background-image: repeating-linear-gradient(0deg, #0D5EAF 0px, #0D5EAF 22px, #FFFFFF 22px, #FFFFFF 44px);"></div>
+          <!-- Meandro Grego Clássico na Base -->
+          <svg class="absolute bottom-0 left-0 right-0 w-full h-10 opacity-30" viewBox="0 0 800 40" preserveAspectRatio="none">
+            <pattern id="greek-key" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0,35 L0,5 L30,5 L30,25 L10,25 L10,15 L20,15" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+            </pattern>
+            <rect width="800" height="40" fill="url(#greek-key)"/>
+          </svg>
+        `,
+        backdropSvg: `
+          <svg class="w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="pat-gr" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M5,55 L5,5 L45,5 L45,35 L20,35 L20,20 L32,20" fill="none" stroke="#0D5EAF" stroke-width="2.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pat-gr)"/>
+          </svg>
+        `
+      }
+    };
+
+    // =========================================================================
+    // APLICA O TEMA VISUAL COMPLETO EM TODO O SITE AO CLICAR EM UM PAÍS
+    // =========================================================================
+    function applyGlobalCountryTheme(country, alsoOpenMenuTab = false) {
+      const theme = countryGlobalThemes[country] || countryGlobalThemes['Todos'];
+      const root = document.documentElement;
+
+      // 1. Atualiza todas as variáveis CSS globais
+      Object.entries(theme.vars).forEach(([prop, val]) => {
+        root.style.setProperty(prop, val);
+      });
+
+      // 2. Injeta o padrão cultural sutil no fundo inteiro do site
+      document.getElementById('global-theme-backdrop').innerHTML = theme.backdropSvg || '';
+
+      // 3. Atualiza o cabeçalho e pílulas de ambientação
+      document.getElementById('header-active-theme-label').textContent = theme.label;
+      document.querySelectorAll('.theme-pill').forEach(btn => {
+        const isCurrent = btn.dataset.themePill === country;
+        btn.classList.toggle('bg-gold-400', isCurrent);
+        btn.classList.toggle('text-royal-950', isCurrent);
+        btn.classList.toggle('border-gold-400', isCurrent);
+        btn.classList.toggle('bg-white/10', !isCurrent);
+        btn.classList.toggle('text-white', !isCurrent);
+        btn.classList.toggle('border-white/25', !isCurrent);
+      });
+
+      // 4. Atualiza o Hero com o tema, decoração e bandeira real tremulando
+      document.getElementById('hero-status-text').textContent = theme.schedule;
+      document.getElementById('hero-tagline').textContent = theme.heroTagline;
+      document.getElementById('hero-description').textContent = theme.heroDesc;
+      document.getElementById('hero-country-decor').innerHTML = theme.decorHtml || '';
+
+      const heroBgImg = document.getElementById('hero-bg-image');
+      if (heroBgImg && theme.heroBg) {
+        heroBgImg.src = theme.heroBg;
+      }
+
+      const emblemCard = document.getElementById('hero-emblem-card');
+      const activeFlagBox = document.getElementById('hero-active-flag-box');
+      const activeFlagImg = document.getElementById('hero-active-flag-img');
+      const activeFlagLabel = document.getElementById('hero-active-flag-label');
+
+      if (country && country !== 'Todos' && theme.flagUrl) {
+        emblemCard.classList.add('hidden');
+        activeFlagBox.classList.remove('hidden');
+        activeFlagBox.classList.add('flex');
+        activeFlagImg.src = theme.flagUrl;
+        activeFlagImg.alt = `Bandeira oficial - ${country}`;
+        activeFlagLabel.textContent = `Ambientação Ativa: ${theme.label}`;
+      } else {
+        activeFlagBox.classList.add('hidden');
+        activeFlagBox.classList.remove('flex');
+        emblemCard.classList.remove('hidden');
+      }
+
+      // 5. Sincroniza o palco do Cardápio Imersivo
+      updateCountryStage(country);
+
+      if (alsoOpenMenuTab) {
+        openImmersiveMenuTab(country, true);
+      }
+    }
+
+    // =========================================================================
+    // LÓGICA DO CALENDÁRIO MENSAL AUTOMÁTICO
+    // =========================================================================
+    function parseLocalIsoDate(isoStr) {
+      if (isoStr && /^\d{4}-\d{2}-\d{2}$/.test(isoStr)) {
+        const [y, m, d] = isoStr.split('-').map(Number);
+        return new Date(y, m - 1, d);
+      }
+      return new Date();
+    }
+
+    function formatIsoDate(dateObj) {
+      const y = dateObj.getFullYear();
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
+    function getScheduleForDate(isoStr) {
+      const d = parseLocalIsoDate(isoStr);
+      const dayOfWeek = d.getDay();
+      const dayOfMonth = d.getDate();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+      const isClosedDay = dayOfWeek === 1 || dayOfWeek === 2;
+
+      if (isWeekend) {
+        const weekendNumber = Math.ceil(dayOfMonth / 7);
+        if (weekendNumber <= 2) {
+          return {
+            country: 'Espanha',
+            periodShort: `${weekendNumber}º Fim de Semana`,
+            periodFull: `${weekendNumber}º Fim de Semana do Mês (Sáb/Dom)`,
+            highlightDish: 'Bacalao al Pil-Pil (R$ 95,31) & Churros (R$ 12,00)',
+            isClosedDay: false
+          };
+        }
+        return {
+          country: 'Grécia',
+          periodShort: `${weekendNumber}º Fim de Semana`,
+          periodFull: `${weekendNumber}º Fim de Semana do Mês (Sáb/Dom)`,
+          highlightDish: 'Moussaka (R$ 59,40) & Keftedes (R$ 22,80)',
+          isClosedDay: false
+        };
+      }
+
+      const weekNumber = Math.min(4, Math.ceil(dayOfMonth / 7));
+      if (weekNumber === 1) {
+        return {
+          country: 'Brasil',
+          periodShort: '1ª Semana',
+          periodFull: '1ª Semana do Mês (Qua a Sex)',
+          highlightDish: 'Feijoada (R$ 75,00)',
+          isClosedDay
+        };
+      }
+      if (weekNumber === 2) {
+        return {
+          country: 'México',
+          periodShort: '2ª Semana',
+          periodFull: '2ª Semana do Mês (Qua a Sex)',
+          highlightDish: 'Burrito (R$ 33,25)',
+          isClosedDay
+        };
+      }
+      if (weekNumber === 3) {
+        return {
+          country: 'França',
+          periodShort: '3ª Semana',
+          periodFull: '3ª Semana do Mês (Qua a Sex)',
+          highlightDish: 'Steak au Poivre (R$ 150,00)',
+          isClosedDay
+        };
+      }
+      return {
+        country: 'Itália',
+        periodShort: '4ª Semana',
+        periodFull: '4ª Semana do Mês (Qua a Sex)',
+        highlightDish: 'Carbonara (R$ 35,00) & Bruschetta (R$ 21,00)',
+        isClosedDay
+      };
+    }
+
+    function getNextOpenDateFrom(isoStr) {
+      const d = parseLocalIsoDate(isoStr);
+      while (d.getDay() === 1 || d.getDay() === 2) {
+        d.setDate(d.getDate() + 1);
+      }
+      return formatIsoDate(d);
+    }
+
+    function getNextValidDateForCountry(countryName) {
+      const cursor = new Date();
+      cursor.setDate(cursor.getDate() + 1);
+      for (let i = 0; i < 65; i++) {
+        const iso = formatIsoDate(cursor);
+        const info = getScheduleForDate(iso);
+        if (!info.isClosedDay && info.country.toLowerCase() === countryName.toLowerCase()) {
+          return iso;
+        }
+        cursor.setDate(cursor.getDate() + 1);
+      }
+      return getNextOpenDateFrom(formatIsoDate(cursor));
+    }
+
+    // =========================================================================
+    // DADOS DOS 6 PAÍSES (COM BANDEIRAS REAIS)
+    // =========================================================================
+    const countriesData = [
+      {
+        name: 'Brasil',
+        flagIcon: 'https://flagcdn.com/w80/br.png',
+        scheduleBadge: '1ª Semana • Qua a Sex',
+        landmark: 'Litoral & Natureza • Brasil',
+        highlight: 'Feijoada (R$ 75,00)',
+        description: 'Abrindo o calendário mensal, celebramos a riqueza e a hospitalidade brasileira com sabores autênticos e ingredientes selecionados.',
+        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85'
+      },
+      {
+        name: 'México',
+        flagIcon: 'https://flagcdn.com/w80/mx.png',
+        scheduleBadge: '2ª Semana • Qua a Sex',
+        landmark: 'Patrimônio Ancestral • México',
+        highlight: 'Burrito (R$ 33,25)',
+        description: 'Na segunda semana do mês, as especiarias suaves, tortilhas artesanais e tradições mexicanas protagonizam a experiência.',
+        image: 'https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1000&q=85'
+      },
+      {
+        name: 'França',
+        flagIcon: 'https://flagcdn.com/w80/fr.png',
+        scheduleBadge: '3ª Semana • Qua a Sex',
+        landmark: 'Torre Eiffel • França',
+        highlight: 'Steak au Poivre (R$ 150,00)',
+        description: 'A terceira semana exalta a alta gastronomia francesa com técnicas clássicas, molhos aveludados e o icônico Steak au Poivre.',
+        image: 'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1000&q=85'
+      },
+      {
+        name: 'Itália',
+        flagIcon: 'https://flagcdn.com/w80/it.png',
+        scheduleBadge: '4ª Semana • Qua a Sex',
+        landmark: 'Coliseu de Roma • Itália',
+        highlight: 'Carbonara (R$ 35,00)',
+        description: 'Na quarta semana do mês, a tradição italiana ganha o salão com massas artesanais, azeites aromáticos e a clássica Bruschetta.',
+        image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1000&q=85'
+      },
+      {
+        name: 'Espanha',
+        flagIcon: 'https://flagcdn.com/w80/es.png',
+        scheduleBadge: '1º e 2º Fins de Semana',
+        landmark: 'Arquitetura Clássica • Espanha',
+        highlight: 'Bacalao al Pil-Pil (R$ 95,31)',
+        description: 'Nos dois primeiros fins de semana do mês, a culinária ibérica brilha com receitas consagradas e os clássicos Churros espanhóis.',
+        image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1000&q=85'
+      },
+      {
+        name: 'Grécia',
+        flagIcon: 'https://flagcdn.com/w80/gr.png',
+        scheduleBadge: '3º e 4º Fins de Semana',
+        landmark: 'Arquitetura Mediterrânea • Grécia',
+        highlight: 'Moussaka (R$ 59,40)',
+        description: 'Nos últimos fins de semana do mês, o frescor do Mediterrâneo inspira pratos aromáticos com ervas, berinjelas e mel.',
+        image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=85'
+      }
+    ];
+
+    // =========================================================================
+    // CARDÁPIO COMPLETO OFICIAL (18 PRATOS EXATOS)
+    // =========================================================================
+    const menuItems = [
+      {
+        id: 1,
+        name: 'Pão de Alho',
+        country: 'Brasil',
+        flagIcon: 'https://flagcdn.com/w40/br.png',
+        category: 'entradas',
+        isSignature: false,
+        badge: 'Entrada • Brasil',
+        price: 'R$ 24,00',
+        description: 'Pão artesanal dourado na brasa com creme aveludado de alho assado, ervas frescas e queijo gratinado.',
+        pairing: 'Ideal para abrir o apetite com limonada suíça gelada ou caipirinha clássica.',
+        schedule: '1ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1573140401552-3fab0b24306f?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 2,
+        name: 'Feijoada',
+        country: 'Brasil',
+        flagIcon: 'https://flagcdn.com/w40/br.png',
+        category: 'principais',
+        isSignature: false,
+        badge: 'Prato Principal • Brasil',
+        price: 'R$ 75,00',
+        description: 'Feijão-preto cozido lentamente com cortes nobres selecionados, acompanhado de arroz branco soltinho, farofa na manteiga, couve refogada e laranja.',
+        pairing: 'Harmoniza perfeitamente com caipirinha de limão-taiti ou suco natural de caju.',
+        schedule: '1ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.pexels.com/photos/34195320/pexels-photo-34195320.jpeg?auto=compress&cs=tinysrgb&w=1000'
+      },
+      {
+        id: 3,
+        name: 'Torta de Cupuaçu',
+        country: 'Brasil',
+        flagIcon: 'https://flagcdn.com/w40/br.png',
+        category: 'sobremesas',
+        isSignature: false,
+        badge: 'Sobremesa • Brasil',
+        price: 'R$ 23,85',
+        description: 'Base crocante amanteigada com creme aerado e intenso de cupuaçu amazônico e acabamento dourado.',
+        pairing: 'Excelente acompanhamento para café expresso ou licor fino.',
+        schedule: '1ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 4,
+        name: 'Quesadilla',
+        country: 'México',
+        flagIcon: 'https://flagcdn.com/w40/mx.png',
+        category: 'entradas',
+        isSignature: false,
+        badge: 'Entrada • México',
+        price: 'R$ 22,95',
+        description: 'Tortilhas de trigo tostadas na chapa recheadas com queijo derretido, pico de gallo fresco e especiarias suaves.',
+        pairing: 'Acompanha muito bem água fresca de hibisco com limão.',
+        schedule: '2ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 5,
+        name: 'Burrito',
+        country: 'México',
+        flagIcon: 'https://flagcdn.com/w40/mx.png',
+        category: 'principais',
+        isSignature: false,
+        badge: 'Prato Principal • México',
+        price: 'R$ 33,25',
+        description: 'Tortilha artesanal recheada com carne temperada, feijões refritos, arroz mexicano, queijo e guacamole fresco.',
+        pairing: 'Harmoniza com drink cítrico de limão-siciliano e hortelã.',
+        schedule: '2ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 6,
+        name: 'Pastel de Tres Leches',
+        country: 'México',
+        flagIcon: 'https://flagcdn.com/w40/mx.png',
+        category: 'sobremesas',
+        isSignature: false,
+        badge: 'Sobremesa • México',
+        price: 'R$ 15,75',
+        description: 'Clássico bolo esponjoso branco embebido em calda rica de três leites, coberto com chantilly suave e polvilhado com canela.',
+        pairing: 'Perfeito com café coado na hora ou chá aromático.',
+        schedule: '2ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 7,
+        name: 'Camembert au Four',
+        country: 'França',
+        flagIcon: 'https://flagcdn.com/w40/fr.png',
+        category: 'entradas',
+        isSignature: false,
+        badge: 'Entrada • França',
+        price: 'R$ 54,00',
+        description: 'Queijo Camembert francês assado até ficar cremoso por dentro, perfumado com alecrim fresco e servido com torradas crocantes.',
+        pairing: 'Harmoniza com vinho branco seco ou espumante brut.',
+        schedule: '3ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 8,
+        name: 'Steak au Poivre',
+        country: 'França',
+        flagIcon: 'https://flagcdn.com/w40/fr.png',
+        category: 'principais',
+        isSignature: true,
+        badge: 'Carro-Chefe • França',
+        price: 'R$ 150,00',
+        description: 'Corte nobre bovino grelhado na manteiga ao molho cremoso de pimentas-do-reino e natas, acompanhado de batatas rústicas douradas.',
+        pairing: 'Harmoniza com vinho tinto encorpado Cabernet Sauvignon ou Syrah.',
+        schedule: '3ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 9,
+        name: 'Moelleux au Chocolat au Cœur Fondant',
+        country: 'França',
+        flagIcon: 'https://flagcdn.com/w40/fr.png',
+        category: 'sobremesas',
+        isSignature: false,
+        badge: 'Sobremesa • França',
+        price: 'R$ 21,38',
+        description: 'Bolinho francês de chocolate meio amargo assado no ponto exato para revelar um centro quente e cremoso.',
+        pairing: 'Ideal com café expresso curto.',
+        schedule: '3ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 10,
+        name: 'Bruschetta',
+        country: 'Itália',
+        flagIcon: 'https://flagcdn.com/w40/it.png',
+        category: 'entradas',
+        isSignature: true,
+        badge: 'Carro-Chefe • Itália',
+        price: 'R$ 21,00',
+        description: 'Pão rústico tostado com alho, tomates frescos marinados, folhas de manjericão e azeite extravirgem selecionado.',
+        pairing: 'Acompanha muito bem soda italiana de limão-siciliano ou Pinot Grigio.',
+        schedule: '4ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 11,
+        name: 'Carbonara',
+        country: 'Itália',
+        flagIcon: 'https://flagcdn.com/w40/it.png',
+        category: 'principais',
+        isSignature: false,
+        badge: 'Prato Principal • Itália',
+        price: 'R$ 35,00',
+        description: 'Massa italiana al dente envolvida em emulsão cremosa de gemas, queijo pecorino curado, guanciale crocante e pimenta-do-reino.',
+        pairing: 'Harmoniza com vinho branco estruturado ou Chianti leve.',
+        schedule: '4ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 12,
+        name: 'Tiramisù',
+        country: 'Itália',
+        flagIcon: 'https://flagcdn.com/w40/it.png',
+        category: 'sobremesas',
+        isSignature: false,
+        badge: 'Sobremesa • Itália',
+        price: 'R$ 25,70',
+        description: 'Camadas delicadas de biscoito embebido em café expresso, creme suave de mascarpone e fina camada de cacau em pó.',
+        pairing: 'Clássico par para café expresso italiano.',
+        schedule: '4ª Semana do Mês (Quarta a Sexta)',
+        image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 13,
+        name: 'Keftedes',
+        country: 'Grécia',
+        flagIcon: 'https://flagcdn.com/w40/gr.png',
+        category: 'entradas',
+        isSignature: false,
+        badge: 'Entrada • Grécia',
+        price: 'R$ 22,80',
+        description: 'Almôndegas gregas douradas temperadas com hortelã fresca, orégano mediterrâneo e especiarias aromáticas.',
+        pairing: 'Acompanha molho refrescante de iogurte com pepino e hortelã.',
+        schedule: '3º e 4º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 14,
+        name: 'Moussaka',
+        country: 'Grécia',
+        flagIcon: 'https://flagcdn.com/w40/gr.png',
+        category: 'principais',
+        isSignature: false,
+        badge: 'Prato Principal • Grécia',
+        price: 'R$ 59,40',
+        description: 'Camadas assadas de berinjelas grelhadas, ragu aromático condimentado e cobertura gratinada de molho bechamel.',
+        pairing: 'Harmoniza com vinho tinto mediterrâneo de taninos macios.',
+        schedule: '3º e 4º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 15,
+        name: 'Baclava',
+        country: 'Grécia',
+        flagIcon: 'https://flagcdn.com/w40/gr.png',
+        category: 'sobremesas',
+        isSignature: false,
+        badge: 'Sobremesa • Grécia',
+        price: 'R$ 28,00',
+        description: 'Lâminas finíssimas e crocantes de massa filo intercaladas com nozes selecionadas e banhadas em calda aromática de mel.',
+        pairing: 'Perfeito com chá de hortelã fresca ou café.',
+        schedule: '3º e 4º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 16,
+        name: 'Patatas Bravas',
+        country: 'Espanha',
+        flagIcon: 'https://flagcdn.com/w40/es.png',
+        category: 'entradas',
+        isSignature: false,
+        badge: 'Entrada • Espanha',
+        price: 'R$ 28,01',
+        description: 'Cubos de batatas douradas e crocantes por fora, servidos com tradicional molho brava levemente picante e aioli.',
+        pairing: 'Excelente com sangria espanhola frutada.',
+        schedule: '1º e 2º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1565599837634-134bc3aadce8?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 17,
+        name: 'Bacalao al Pil-Pil',
+        country: 'Espanha',
+        flagIcon: 'https://flagcdn.com/w40/es.png',
+        category: 'principais',
+        isSignature: false,
+        badge: 'Prato Principal • Espanha',
+        price: 'R$ 95,31',
+        description: 'Lombo nobre de bacalhau confitado lentamente em azeite extravirgem com alho laminado e emulsão sedosa da culinária basca.',
+        pairing: 'Harmoniza com vinho branco verdejo ou albariño.',
+        schedule: '1º e 2º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85'
+      },
+      {
+        id: 18,
+        name: 'Churros',
+        country: 'Espanha',
+        flagIcon: 'https://flagcdn.com/w40/es.png',
+        category: 'sobremesas',
+        isSignature: true,
+        badge: 'Carro-Chefe • Espanha',
+        price: 'R$ 12,00',
+        description: 'Clássicos churros espanhóis dourados e crocantes, polvilhados com açúcar e canela, servidos com calda quente de chocolate.',
+        pairing: 'Ideal com chocolate quente ou café expresso.',
+        schedule: '1º e 2º Fins de Semana do Mês (Sábado e Domingo)',
+        image: 'https://images.unsplash.com/photo-1624371414361-e670edf4898d?auto=format&fit=crop&w=900&q=85'
+      }
+    ];
+
+    let activeCountryFilter = 'Todos';
+    let activeCategoryFilter = 'all';
+
+    // =========================================================================
+    // SISTEMA DE ABAS (ABA PRINCIPAL VS ABA EXCLUSIVA DO CARDÁPIO IMERSIVO)
+    // =========================================================================
+    function switchMainTab(tabName, targetHash = null) {
+      const homeView = document.getElementById('view-home');
+      const menuView = document.getElementById('view-menu-tab');
+      const navHomeBtn = document.getElementById('nav-tab-home');
+      const navMenuBtn = document.getElementById('nav-tab-menu');
+
+      if (tabName === 'menu') {
+        homeView.classList.add('hidden');
+        menuView.classList.remove('hidden');
+
+        navHomeBtn.classList.remove('theme-border', 'theme-text-accent-soft');
+        navHomeBtn.classList.add('border-transparent');
+
+        navMenuBtn.classList.add('theme-border', 'theme-text-accent-soft');
+        navMenuBtn.classList.remove('border-transparent');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        menuView.classList.add('hidden');
+        homeView.classList.remove('hidden');
+
+        navMenuBtn.classList.remove('theme-border', 'theme-text-accent-soft');
+        navMenuBtn.classList.add('border-transparent');
+
+        navHomeBtn.classList.add('theme-border', 'theme-text-accent-soft');
+        navHomeBtn.classList.remove('border-transparent');
+
+        if (targetHash) {
+          setTimeout(() => {
+            const el = document.querySelector(targetHash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 40);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    }
+
+    function openImmersiveMenuTab(country = 'Todos', scrollToTop = true) {
+      activeCountryFilter = country;
+      activeCategoryFilter = 'all';
+      applyGlobalCountryTheme(country, false);
+      updateFilterPills();
+      renderMenu();
+      switchMainTab('menu');
+      if (scrollToTop) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Abre o cardápio em uma nova aba real do navegador usando parâmetros de URL (?aba=cardapio&pais=...)
+    function openStandaloneMenuNewBrowserTab(country = 'Todos') {
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('aba', 'cardapio');
+        if (country && country !== 'Todos') {
+          url.searchParams.set('pais', country);
+        } else {
+          url.searchParams.delete('pais');
+        }
+        const newWin = window.open(url.toString(), '_blank', 'noopener,noreferrer');
+        if (!newWin) {
+          openImmersiveMenuTab(country, true);
+        }
+      } catch (err) {
+        openImmersiveMenuTab(country, true);
+      }
+    }
+
+    // Atualiza o palco cenográfico da bandeira real no topo da Aba Cardápio
+    function updateCountryStage(country) {
+      const theme = countryGlobalThemes[country] || countryGlobalThemes['Todos'];
+      const animLayer = document.getElementById('flag-animation-layer');
+      const showcase = document.getElementById('stage-flag-showcase');
+
+      animLayer.innerHTML = theme.decorHtml || '';
+
+      if (country && country !== 'Todos' && theme.flagUrl) {
+        showcase.innerHTML = `
+          <div class="real-flag-container p-2.5 rounded-2xl bg-black/40 backdrop-blur-md border-2 theme-border">
+            <img src="${theme.flagUrl}" alt="Bandeira oficial - ${country}" class="w-56 sm:w-72 h-36 sm:h-48 object-cover rounded-xl" />
+          </div>
+          <span class="mt-3 text-[11px] font-bold uppercase tracking-widest theme-text-accent-soft">Bandeira Oficial • ${theme.label}</span>
+        `;
+      } else {
+        showcase.innerHTML = `
+          <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-black/50 border-2 theme-border flex flex-col items-center justify-center p-4 shadow-2xl">
+            <svg viewBox="0 0 340 310" class="w-28 h-28 sm:w-32 sm:h-32"><use href="#cwt-official-logo"></use></svg>
+            <span class="text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft mt-1">18 Pratos Oficiais</span>
+          </div>
+        `;
+      }
+
+      document.getElementById('stage-schedule-tag').textContent = theme.schedule;
+      document.getElementById('stage-country-title').textContent = theme.stageTitle;
+      document.getElementById('stage-country-subtitle').textContent = theme.stageSubtitle;
+
+      const reserveBtn = document.getElementById('stage-reserve-btn');
+      const reserveLabel = document.getElementById('stage-reserve-label');
+
+      if (country && country !== 'Todos') {
+        reserveLabel.textContent = `Reservar Semana ${country}`;
+        reserveBtn.onclick = () => reserveForCountry(country);
+      } else {
+        reserveLabel.textContent = 'Emitir Passaporte de Reserva';
+        reserveBtn.onclick = () => openReservationModal();
+      }
+    }
+
+    // Renderiza os 6 cards da seção '6 Países, 6 Experiências' com bandeiras reais
+    function renderCountries() {
+      const container = document.getElementById('countries-grid');
+      container.innerHTML = countriesData.map((country, idx) => {
+        const fallback = createFallbackSvg(country.name.toUpperCase(), country.scheduleBadge.toUpperCase());
+        return `
+          <article class="bg-white rounded-2xl overflow-hidden shadow-luxury border theme-border flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+            <div>
+              <div class="relative h-56 bg-neutral-900 overflow-hidden cursor-pointer" onclick="applyGlobalCountryTheme('${country.name}', false)">
+                <img
+                  src="${country.image}"
+                  onerror="this.onerror=null;this.src='${fallback}';"
+                  alt="${country.landmark}"
+                  class="w-full h-full object-cover object-center transition duration-500 hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+                <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-black/80 border theme-border theme-text-accent-soft text-[10px] font-bold uppercase tracking-widest">
+                  0${idx + 1} • ${country.scheduleBadge}
+                </span>
+                <img src="${country.flagIcon}" alt="Bandeira ${country.name}" class="absolute top-3.5 right-3.5 w-9 h-6 object-cover rounded shadow-md border border-white/40" />
+                <div class="absolute bottom-3.5 left-4 right-4">
+                  <span class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent-soft">${country.landmark}</span>
+                  <h3 class="font-display text-2xl font-bold text-white mt-0.5">${country.name}</h3>
+                </div>
+              </div>
+
+              <div class="p-5 sm:p-6">
+                <p class="text-sm text-slate-700 leading-relaxed">${country.description}</p>
+                <div class="mt-4 pt-3.5 border-t border-gray-100">
+                  <span class="block text-[10px] font-bold uppercase tracking-widest theme-text-accent">Destaque no Calendário</span>
+                  <p class="text-sm font-bold theme-text-deep mt-0.5">${country.highlight}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-5 sm:px-6 pb-5 sm:pb-6 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <button type="button" onclick="openImmersiveMenuTab('${country.name}', true)" class="min-h-[44px] border theme-border theme-surface-tint hover:opacity-85 theme-text-deep font-bold text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-lg transition cursor-pointer flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-wand-magic-sparkles theme-text-accent"></i>
+                <span>Ativar & Cardápio</span>
+              </button>
+              <button type="button" onclick="reserveForCountry('${country.name}')" class="min-h-[44px] gold-btn font-bold text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-lg cursor-pointer flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-passport"></i>
+                <span>Reservar</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Renderiza os pratos filtráveis na Aba Cardápio Imersivo
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      const filtered = menuItems.filter(item => {
+        const matchesCountry = activeCountryFilter === 'Todos' || item.country === activeCountryFilter;
+        const matchesCat = activeCategoryFilter === 'all' || item.category === activeCategoryFilter;
+        return matchesCountry && matchesCat;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-black/50 border theme-border rounded-2xl p-8 text-center">
+            <p class="font-display text-xl theme-text-accent-soft">Nenhum prato encontrado para este filtro.</p>
+            <button type="button" onclick="resetMenuFilters()" class="mt-4 min-h-[44px] gold-btn font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-lg cursor-pointer">
+              Exibir Todos os 18 Pratos
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const fallback = createFallbackSvg(item.name, item.country.toUpperCase());
+        const badgeStyle = item.isSignature
+          ? 'gold-btn'
+          : 'bg-black/80 theme-text-accent-soft border theme-border';
+        const borderStyle = item.isSignature ? 'border-2 theme-border' : 'border border-white/15';
+
+        return `
+          <article class="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-luxury ${borderStyle} flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+            <div>
+              <div class="relative h-52 sm:h-56 bg-neutral-900 overflow-hidden cursor-pointer" onclick="openDishModal(${item.id})">
+                <img
+                  src="${item.image}"
+                  onerror="this.onerror=null;this.src='${fallback}';"
+                  alt="${item.name} - ${item.country}"
+                  class="w-full h-full object-cover object-center transition duration-500 hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+                <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest ${badgeStyle}">
+                  ${item.badge}
+                </span>
+                <span class="absolute bottom-3 left-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white">
+                  <img src="${item.flagIcon}" alt="${item.country}" class="w-5 h-3.5 object-cover rounded-[2px] border border-white/40" />
+                  <span>${item.country}</span>
+                </span>
+              </div>
+
+              <div class="p-5 sm:p-6">
+                <div class="flex items-start justify-between gap-3">
+                  <h3 class="font-display text-lg sm:text-xl font-bold theme-text-deep leading-snug">${item.name}</h3>
+                  <span class="font-display text-lg sm:text-xl font-bold theme-text-deep shrink-0">${item.price}</span>
+                </div>
+                <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">${item.description}</p>
+              </div>
+            </div>
+
+            <div class="px-5 sm:px-6 pb-5 pt-3.5 border-t border-gray-100 flex items-center justify-between gap-2">
+              <button type="button" onclick="openDishModal(${item.id})" class="min-h-[40px] text-xs font-bold uppercase tracking-widest theme-text-deep hover:opacity-75 transition cursor-pointer">
+                <i class="fa-regular fa-eye mr-1"></i>Detalhes
+              </button>
+              <button type="button" onclick="reserveForCountry('${item.country}')" class="min-h-[40px] text-xs font-bold uppercase tracking-widest theme-text-accent hover:opacity-75 transition cursor-pointer">
+                Reservar Período <i class="fa-solid fa-chevron-right ml-1"></i>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function updateFilterPills() {
+      document.querySelectorAll('.country-pill').forEach(btn => {
+        const isActive = btn.dataset.country === activeCountryFilter;
+        btn.classList.toggle('bg-gold-400', isActive);
+        btn.classList.toggle('text-royal-950', isActive);
+        btn.classList.toggle('border-gold-400', isActive);
+        btn.classList.toggle('bg-black/45', !isActive);
+        btn.classList.toggle('text-white', !isActive);
+        btn.classList.toggle('border-white/30', !isActive);
+      });
+
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        const isActive = btn.dataset.cat === activeCategoryFilter;
+        btn.classList.toggle('bg-white', isActive);
+        btn.classList.toggle('text-royal-950', isActive);
+        btn.classList.toggle('border-white', isActive);
+        btn.classList.toggle('bg-black/40', !isActive);
+        btn.classList.toggle('text-white', !isActive);
+        btn.classList.toggle('border-white/35', !isActive);
+      });
+    }
+
+    function setCountryFilter(country) {
+      activeCountryFilter = country;
+      applyGlobalCountryTheme(country, false);
+      updateFilterPills();
+      renderMenu();
+    }
+
+    function setCategoryFilter(category) {
+      activeCategoryFilter = category;
+      updateFilterPills();
+      renderMenu();
+    }
+
+    function resetMenuFilters() {
+      activeCountryFilter = 'Todos';
+      activeCategoryFilter = 'all';
+      applyGlobalCountryTheme('Todos', false);
+      updateFilterPills();
+      renderMenu();
+    }
+
+    // =========================================================================
+    // MENU MOBILE
+    // =========================================================================
+    const mobileToggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-menu-drawer');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+    mobileToggleBtn.addEventListener('click', () => {
+      const isHidden = mobileDrawer.classList.toggle('hidden');
+      mobileToggleBtn.setAttribute('aria-expanded', String(!isHidden));
+      mobileMenuIcon.className = isHidden ? 'fa-solid fa-bars text-lg' : 'fa-solid fa-xmark text-lg';
+    });
+
+    function closeMobileMenu() {
+      mobileDrawer.classList.add('hidden');
+      mobileToggleBtn.setAttribute('aria-expanded', 'false');
+      mobileMenuIcon.className = 'fa-solid fa-bars text-lg';
+    }
+
+    // =========================================================================
+    // BARRA RÁPIDA DE RESERVA (HERO)
+    // =========================================================================
+    function syncQuickBarWithDate() {
+      const dateInput = document.getElementById('quick-date');
+      const info = getScheduleForDate(dateInput.value);
+
+      document.getElementById('quick-theme-text').textContent = `${info.country} • ${info.highlightDish}`;
+      document.getElementById('quick-period-tag').textContent = info.periodShort;
+
+      const closedAlert = document.getElementById('quick-closed-alert');
+      if (info.isClosedDay) {
+        document.getElementById('quick-closed-country').textContent = info.country;
+        closedAlert.classList.remove('hidden');
+      } else {
+        closedAlert.classList.add('hidden');
+      }
+    }
+
+    function snapQuickDateToOpenDay() {
+      const current = document.getElementById('quick-date').value;
+      const openDate = getNextOpenDateFrom(current);
+      document.getElementById('quick-date').value = openDate;
+      syncQuickBarWithDate();
+    }
+
+    function handleQuickBarSubmit(e) {
+      e.preventDefault();
+      const dateVal = document.getElementById('quick-date').value;
+      const timeVal = document.getElementById('quick-time').value;
+      openReservationModal(dateVal, timeVal);
+    }
+
+    // =========================================================================
+    // MODAL DE DETALHES DO PRATO
+    // =========================================================================
+    const dishModal = document.getElementById('dish-modal');
+
+    function openDishModal(id) {
+      const item = menuItems.find(m => m.id === id);
+      if (!item) return;
+
+      const img = document.getElementById('dish-modal-img');
+      const fallback = createFallbackSvg(item.name, item.country.toUpperCase());
+      img.onerror = () => { img.onerror = null; img.src = fallback; };
+      img.src = item.image;
+      img.alt = `${item.name} - ${item.country}`;
+
+      document.getElementById('dish-modal-badge').textContent = item.badge;
+      document.getElementById('dish-modal-country').textContent = `Destino: ${item.country}`;
+      document.getElementById('dish-modal-title').textContent = item.name;
+      document.getElementById('dish-modal-price').textContent = item.price;
+      document.getElementById('dish-modal-desc').textContent = item.description;
+      document.getElementById('dish-modal-pairing').textContent = item.pairing;
+      document.getElementById('dish-modal-schedule').textContent = item.schedule;
+
+      document.getElementById('dish-modal-reserve-btn').onclick = () => {
+        closeDishModal();
+        reserveForCountry(item.country);
+      };
+
+      dishModal.classList.remove('hidden');
+      dishModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDishModal() {
+      dishModal.classList.add('hidden');
+      dishModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    dishModal.addEventListener('click', (e) => {
+      if (e.target === dishModal) closeDishModal();
+    });
+
+    // =========================================================================
+    // MODAL PASSAPORTE DE RESERVA CWT
+    // =========================================================================
+    const reservationModal = document.getElementById('reservation-modal');
+    const bookingForm = document.getElementById('booking-form');
+    const passportView = document.getElementById('booking-passport-view');
+
+    function syncModalWithDate() {
+      const dateVal = document.getElementById('booking-date').value;
+      const info = getScheduleForDate(dateVal);
+
+      document.getElementById('modal-period-badge').textContent = info.periodFull;
+      document.getElementById('modal-country-title').textContent = `País em Cartaz: ${info.country}`;
+      document.getElementById('modal-country-dish').textContent = `Destaque Gastronômico: ${info.highlightDish}`;
+
+      const closedAlert = document.getElementById('modal-closed-alert');
+      const submitBtn = document.getElementById('booking-submit-btn');
+
+      if (info.isClosedDay) {
+        closedAlert.classList.remove('hidden');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      } else {
+        closedAlert.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    function snapModalDateToOpenDay() {
+      const current = document.getElementById('booking-date').value;
+      const openDate = getNextOpenDateFrom(current);
+      document.getElementById('booking-date').value = openDate;
+      syncModalWithDate();
+    }
+
+    function openReservationModal(preselectedDate = null, preselectedTime = null) {
+      bookingForm.classList.remove('hidden');
+      passportView.classList.add('hidden');
+
+      const targetDate = preselectedDate || document.getElementById('quick-date').value;
+      document.getElementById('booking-date').value = targetDate;
+
+      if (preselectedTime) {
+        const timeSelect = document.getElementById('booking-time');
+        const match = Array.from(timeSelect.options).find(opt => opt.value === preselectedTime);
+        if (match) timeSelect.value = match.value;
+      }
+
+      syncModalWithDate();
+      reservationModal.classList.remove('hidden');
+      reservationModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function reserveForCountry(countryName) {
+      const validDate = getNextValidDateForCountry(countryName);
+      document.getElementById('quick-date').value = validDate;
+      syncQuickBarWithDate();
+      openReservationModal(validDate);
+    }
+
+    function closeReservationModal() {
+      reservationModal.classList.add('hidden');
+      reservationModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const dateVal = document.getElementById('booking-date').value;
+      const info = getScheduleForDate(dateVal);
+      if (info.isClosedDay) {
+        snapModalDateToOpenDay();
+        return;
+      }
+
+      const name = document.getElementById('booking-name').value.trim();
+      const guests = document.getElementById('booking-guests').value;
+      const time = document.getElementById('booking-time').value;
+      const formattedDate = dateVal.split('-').reverse().join('/');
+      const randomCode = Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById('passport-code').textContent = `#CWT-${randomCode}`;
+      document.getElementById('passport-passenger').textContent = name;
+      document.getElementById('passport-datetime').textContent = `${formattedDate} • ${time}`;
+      document.getElementById('passport-guests').textContent = guests;
+      document.getElementById('passport-destination').textContent = `${info.country} — ${info.periodFull}`;
+
+      bookingForm.classList.add('hidden');
+      passportView.classList.remove('hidden');
+    }
+
+    reservationModal.addEventListener('click', (e) => {
+      if (e.target === reservationModal) closeReservationModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDishModal();
+        closeReservationModal();
+        closeMobileMenu();
+      }
+    });
+
+    // =========================================================================
+    // INICIALIZAÇÃO DA PÁGINA
+    // =========================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const initialOpenIso = getNextOpenDateFrom(formatIsoDate(tomorrow));
+
+      document.getElementById('quick-date').value = initialOpenIso;
+      document.getElementById('booking-date').value = initialOpenIso;
+
+      syncQuickBarWithDate();
+      syncModalWithDate();
+      renderCountries();
+      applyGlobalCountryTheme('Todos', false);
+      renderMenu();
+
+      // Suporta abertura direta em nova aba na visão do cardápio (?aba=cardapio&pais=...)
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('aba') === 'cardapio' || params.get('tab') === 'cardapio') {
+        const requestedCountry = params.get('pais') || 'Todos';
+        const validCountries = ['Todos', 'Brasil', 'México', 'França', 'Itália', 'Espanha', 'Grécia'];
+        const safeCountry = validCountries.includes(requestedCountry) ? requestedCountry : 'Todos';
+        openImmersiveMenuTab(safeCountry, true);
+      }
+    });
+  </script>
+</body>
+</html>
